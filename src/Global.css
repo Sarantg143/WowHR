@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Antic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button,
+a {
+  outline: none;
+}
+
+::-webkit-scrollbar-thumb {
+  /* background-color: rgb(164, 163, 163); */
+  background-color: #089ede;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  background-color: rgb(255, 255, 255);
+}
+
+/* 
+.antic-regular {
+  font-family: "Antic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.jost-<uniquifier> {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+  // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 700
+
+.comfortaa-<uniquifier> {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
