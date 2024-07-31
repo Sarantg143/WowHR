@@ -8,6 +8,7 @@ import Partners from "./Components/Partners";
 import Testimonials from "./Components/Testimonials";
 import Footer from "./Components/Footer";
 import LandingPage from "./Components/LandingPage";
+import Banner from "./Components/Banner";
 
 function App() {
   return (
@@ -17,10 +18,13 @@ function App() {
       <AboutUs />
       <OurService />
       <Partners />
-      <Events />
-      <Knowledge />
       <LeaderShip />
+      <Knowledge />
+      <Events />
       <Testimonials />
+      <div className="py-20 overflow-hidden bg-red-500">
+        <Banner />
+      </div>
       <Footer />
     </div>
   );

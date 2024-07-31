@@ -1,4 +1,4 @@
-import cardFrame from "../assets/SVG/cardOuter.svg";
+import CardFrame from "../assets/SVG/cardOuter.jsx";
 import cardIcon1 from "../assets/SVG/card1Icon.svg";
 import cardIcon2 from "../assets/SVG/card2Icon.svg";
 import cardIcon3 from "../assets/SVG/card3Icon.svg";
@@ -7,9 +7,9 @@ const OurService = () => {
   return (
     <section
       id="our-service"
-      className="h-screen flex flex-col justify-center  mx-auto max-w-7xl p-20 items-center bg-red-600"
+      className="flex flex-col items-center justify-center h-screen p-20 mx-auto bg-red-600 max-w-7xl"
     >
-      <div className="bg-green-300 font-semibold font-jost text-3xl mb-8">
+      <div className="mb-8 text-3xl font-semibold bg-green-300 font-jost">
         OUR SERVICES
       </div>
       <div className="bg-green-400 text-lg font-semibold text-center tracking-wider leading-[1.9] mb-20 mx-3">
@@ -19,16 +19,22 @@ const OurService = () => {
         A step forward, we intend to provide exclusive learning experience
         through different learning formats by Industrial experts.
       </div>
-      <div className="bg-purple-800 flex  gap-6">
-        <div className="bg-purple-300 relative w-[230px] h-[280px] ">
-          <img
-            src={cardFrame}
-            alt="cardFrame"
-            className="object-contain absolute w-[228px] h-[275px] bg-darkBlue inset-0 "
+      <div className="flex gap-6 bg-purple-800">
+        <div className=" relative w-[230px] h-[280px]">
+          {/* <img
+            src={CardFrame}
+            alt="CardFrame"
+            className="object-contain absolute w-[228px] h-[275px] stroke-black fill-red-900 inset-0 "
+            style={{ stroke: "black", fill: "#e3342f" }}
+          /> */}
+          <CardFrame
+            filler={"#011329"}
+            stroker={"#cccccc"}
+            className="object-contain absolute w-[228px] h-[275px] inset-0"
           />
-          <div className=" text-white mx-5 my-4 absolute top-1">
+          <div className="absolute mx-5 my-4 text-white top-1">
             <img src={cardIcon1} alt="cardIcon1" className="mb-5 " />
-            <div className="bg-orange-500 font-bold text-xl mb-4 ">Network</div>
+            <div className="mb-4 text-xl font-bold bg-orange-500 ">Network</div>
             <div className="bg-orange-300 text-base font-semibold text-left leading-[1.5] min-h-[5rem]">
               Be a part of a community of HR Professionals across India.
             </div>
@@ -39,14 +45,20 @@ const OurService = () => {
           </div>
         </div>
         <div className="bg-purple-300 relative w-[230px] translate-y-6 h-[275px] ">
-          <img
-            src={cardFrame}
-            alt="cardFrame"
+          {/* <img
+            src={CardFrame}
+            alt="CardFrame"
             className="object-contain absolute w-[228px] h-[273px] bg-white inset-0 "
+          /> */}
+          <CardFrame
+            filler={"#ffffff"}
+            stroker={"#cccccc"}
+            className="object-contain absolute w-[228px] h-[275px] inset-0"
           />
-          <div className="  mx-5 my-4 absolute top-1">
+
+          <div className="absolute mx-5 my-4 top-1">
             <img src={cardIcon2} alt="cardIcon2" className="mb-5 " />
-            <div className="bg-orange-500 font-bold text-xl mb-4 ">
+            <div className="mb-4 text-xl font-bold bg-orange-500 ">
               Chapters
             </div>
             <div className="bg-orange-300 text-base font-semibold text-left leading-[1.5] min-h-[5rem]">
@@ -60,14 +72,19 @@ const OurService = () => {
           </div>
         </div>
         <div className="bg-purple-300 relative w-[230px] h-[275px] ">
-          <img
-            src={cardFrame}
-            alt="cardFrame"
+          {/* <img
+            src={CardFrame}
+            alt="CardFrame"
             className="object-contain absolute w-[228px] h-[273px] bg-white inset-0 "
+          /> */}
+          <CardFrame
+            filler={"#ffffff"}
+            stroker={"#cccccc"}
+            className="object-contain absolute w-[228px] h-[275px] inset-0"
           />
-          <div className="  mx-5 my-4 absolute top-1">
+          <div className="absolute mx-5 my-4 top-1">
             <img src={cardIcon3} alt="cardIcon3" className="mb-5 " />
-            <div className="bg-orange-500 font-bold text-xl mb-4 ">
+            <div className="mb-4 text-xl font-bold bg-orange-500 ">
               Certification
             </div>
             <div className="bg-orange-300 text-base font-semibold text-left tracking-tight leading-[1.5] min-h-[5rem]">
@@ -81,14 +98,19 @@ const OurService = () => {
           </div>
         </div>
         <div className="bg-purple-300 relative w-[230px] translate-y-6 h-[275px] ">
-          <img
-            src={cardFrame}
-            alt="cardFrame"
+          {/* <img
+            src={CardFrame}
+            alt="CardFrame"
             className="object-contain absolute w-[228px] h-[273px] bg-white inset-0 "
+          /> */}
+          <CardFrame
+            filler={"#ffffff"}
+            stroker={"#cccccc"}
+            className="object-contain absolute w-[228px] h-[275px] inset-0"
           />
-          <div className="  mx-5 my-4 absolute top-1">
+          <div className="absolute mx-5 my-4 top-1">
             <img src={cardIcon4} alt="cardIcon4" className="mb-5 " />
-            <div className="bg-orange-500 font-bold text-xl mb-4 ">Jobs</div>
+            <div className="mb-4 text-xl font-bold bg-orange-500 ">Jobs</div>
             <div className="bg-orange-300 text-base font-semibold text-left leading-[1.5] min-h-[5rem]">
               Presenting a platform where HR Talents meets Recruiters.
             </div>

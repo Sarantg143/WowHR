@@ -36,6 +36,55 @@ a {
   background-color: rgb(255, 255, 255);
 }
 
+/* leadership */
+.custom-border {
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 70px;
+  height: 3px;
+  background-color: white;
+  clip-path: polygon(0 100%, 95% 100%, 100% 0, 5% 0);
+}
+
+.select-selected {
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding-right: 30px;
+}
+
+.select-selected:after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 11px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+  transition: all 0.3s ease;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  transform: translateY(-50%);
+}
+
+.select-items {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.select-items.select-show {
+  opacity: 1;
+  max-height: 200px;
+  transition: all 0.3s ease;
+}
+/* leadership */
+
 /* 
 .antic-regular {
   font-family: "Antic", sans-serif;
