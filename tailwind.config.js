@@ -13,6 +13,9 @@ export default {
         antic: ["Antic", "sans-serif"],
         jost: ["Jost", "sans-serif"],
       },
+      screens: {
+        xs: "320px",
+      },
       // fontSize: {
       //   xxs: "0.625rem",
       //   xs: "0.75rem",

@@ -13,7 +13,7 @@ import Banner from "./Components/Banner";
 function App() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <LandingPage />
       <AboutUs />
       <OurService />
@@ -22,7 +22,7 @@ function App() {
       <Knowledge />
       <Events />
       <Testimonials />
-      <div className="py-20 overflow-hidden bg-red-500">
+      <div className="py-3 overflow-hidden bg-red-500 sm:py-10 ">
         <Banner />
       </div>
       <Footer />

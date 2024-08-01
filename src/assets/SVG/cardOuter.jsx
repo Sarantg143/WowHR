@@ -1,7 +1,8 @@
-const CardFrame = ({ filler, stroker }) => (
+const CardFrame = ({ filler, stroker, className }) => (
   <svg
     width="228"
     height="273"
+    className={className}
     viewBox="0 0 228 273"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

@@ -80,10 +80,15 @@ a {
 
 .select-items.select-show {
   opacity: 1;
-  max-height: 200px;
+  overflow-y: scroll;
+  max-height: 100px;
   transition: all 0.3s ease;
 }
 /* leadership */
+/* Prevent scrolling on the background content */
+.no-scroll {
+  overflow: hidden;
+}
 
 /* 
 .antic-regular {

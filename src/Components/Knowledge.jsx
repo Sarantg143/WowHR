@@ -1,7 +1,9 @@
 import mini1 from "../assets/Images/knowledgeMini1.png";
 import mini2 from "../assets/Images/knowledgeMini2.png";
 import mini3 from "../assets/Images/knowledgeMini3.png";
+import useScreenSize from "./useScreenSize";
 import { useState, useRef, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Knowledge = () => {
   const knowledgeData = [
@@ -12,6 +14,7 @@ const Knowledge = () => {
       description:
         "Why everyone on your sales team will benefit from our app's killer features.",
       authorImg: mini1,
+      linkedInLink: "https://linkedin.com/",
       authorName: "Kathryn Murphy",
     },
     {
@@ -21,6 +24,7 @@ const Knowledge = () => {
       description:
         "The teams best prepared for change use modern digital communication tools, feel comfortable learning new ones and continually adapt how they work.",
       authorImg: mini2,
+      linkedInLink: "https://linkedin.com/",
       authorName: "Devon Lane",
     },
     {
@@ -30,6 +34,7 @@ const Knowledge = () => {
       description:
         "The executive producer of Dotto Tech shares his favorite Slack strategies for conquering common challenges in the digital-first workplace.",
       authorImg: mini3,
+      linkedInLink: "https://linkedin.com/",
       authorName: "Theresa Webb",
     },
     {
@@ -39,6 +44,7 @@ const Knowledge = () => {
       description:
         "The executive producer of Dotto Tech shares his favorite Slack strategies for conquering common challenges in the digital-first workplace.",
       authorImg: mini3,
+      linkedInLink: "https://linkedin.com/",
       authorName: "Theresa Webb",
     },
     {
@@ -48,6 +54,7 @@ const Knowledge = () => {
       description:
         "The executive producer of Dotto Tech shares his favorite Slack strategies for conquering common challenges in the digital-first workplace.",
       authorImg: mini3,
+      linkedInLink: "https://linkedin.com/",
       authorName: "Theresa Webb",
     },
     {
@@ -57,6 +64,7 @@ const Knowledge = () => {
       description:
         "The executive producer of Dotto Tech shares his favorite Slack strategies for conquering common challenges in the digital-first workplace.",
       authorImg: mini3,
+      linkedInLink: "https://linkedin.com/",
       authorName: "Theresa Webb",
     },
     {
@@ -65,6 +73,69 @@ const Knowledge = () => {
         "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
       title: "spotify 1",
       description: "spotify 1 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
     },
     {
       type: "podcast",
@@ -112,7 +183,9 @@ const Knowledge = () => {
   );
 
   // Sliding
-  const itemsPerPageHub = 4;
+  const { width } = useScreenSize();
+  const isSmallScreen = width < 640;
+  const itemsPerPageHub = !isSmallScreen ? 4 : 2;
 
   const [currentIndexHub, setCurrentIndexHub] = useState(0);
   const [isHoveredHub, setIsHoveredHub] = useState(false);
@@ -142,7 +215,7 @@ const Knowledge = () => {
             return 0;
           }
         });
-      }, 30000);
+      }, 3000);
     };
 
     if (!isHoveredHub) {
@@ -157,20 +230,20 @@ const Knowledge = () => {
   return (
     <section
       id="knwoledge"
-      className="flex flex-col h-screen pr-24 overflow-hidden bg-orange-600 pl-36 "
+      className="flex flex-col h-full p-5 overflow-hidden bg-orange-600 sm:p-0 sm:pl-40 sm:pr-24 sm:h-screen "
     >
-      <div className="max-w-xl mb-10 bg-red-200">
-        <div className="text-2xl font-semibold leading-tight text-left bg-green-300 mb-9 font-jost">
+      <div className="max-w-2xl mb-5 bg-red-200 sm:mb-10">
+        <div className="mb-3 text-xl font-semibold leading-tight text-left bg-green-300 sm:text-3xl sm:mb-9 font-jost">
           KNOWLEGDE HUB
         </div>
-        <div className="bg-green-400 text-base font-semibold text-left tracking-wide leading-[1.55] mx-auto">
+        <div className="bg-green-400 text-sm sm:text-lg font-semibold text-left tracking-wider leading-[1.55] mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
         </div>
       </div>
-      <div className="flex bg-green-700 mb-9 gap-9">
+      <div className="flex bg-green-700 mb-3 sm:mb-9 gap-0 justify-between sm:justify-normal sm:gap-9 sm:mx-[.15rem]">
         <button
-          className={`pb-1 text-lg font-medium text-left border-b-2 border-red-900  min-w-64 font-jost ${
+          className={`pb-2 text-xs px-1 pt-1 sm:text-xl font-medium text-left border-b-2 border-red-900  min-w-20 sm:min-w-40 sm:w-72 font-jost ${
             selectedType === "pepTalks" ? "bg-green-200" : "bg-red-300"
           }`}
           onClick={() => handleTypeClick("pepTalks")}
@@ -178,7 +251,7 @@ const Knowledge = () => {
           Pep Talks
         </button>
         <button
-          className={`pb-1 text-lg font-medium text-left border-b-2 border-red-900  min-w-64 font-jost ${
+          className={`pb-2 text-xs px-1 pt-1 sm:text-xl font-medium text-left border-b-2 border-red-900  min-w-20 sm:min-w-40 sm:w-72 font-jost ${
             selectedType === "podcast" ? "bg-green-200" : "bg-red-300"
           }`}
           onClick={() => handleTypeClick("podcast")}
@@ -186,7 +259,7 @@ const Knowledge = () => {
           Podcast
         </button>
         <button
-          className={`pb-1 text-lg font-medium text-left border-b-2 border-red-900  min-w-64 font-jost ${
+          className={`pb-2 text-xs px-1 pt-1 sm:text-xl font-medium text-left border-b-2 border-red-900  min-w-20 sm:min-w-40 sm:w-72 font-jost ${
             selectedType === "LearningPrograms" ? "bg-green-200" : "bg-red-300"
           }`}
           onClick={() => handleTypeClick("LearningPrograms")}
@@ -195,10 +268,10 @@ const Knowledge = () => {
         </button>
       </div>
 
-      <div className="relative px-[.25rem] overflow-hidden bg-red-900">
+      <div className="relative px-[.1rem] sm:px-[.15rem] overflow-hidden bg-red-900">
         {selectedType === "pepTalks" && (
           <div
-            className="flex overflow-hidden transition-transform duration-300 ease-in-out bg-red-900 gap-9"
+            className="flex gap-3 transition-transform duration-300 ease-in-out bg-red-900 sm:gap-9"
             style={{
               transform: `translateX(-${
                 currentIndexHub * (103 / itemsPerPageHub)
@@ -208,11 +281,11 @@ const Knowledge = () => {
             {filteredDataHub.map((x, i) => (
               <div
                 key={i}
-                className="w-64 bg-blue-100 rounded-lg shadow-md"
+                className="w-40 bg-blue-100 rounded-lg shadow-md sm:w-72"
                 onMouseEnter={() => setIsHoveredHub(true)}
                 onMouseLeave={() => setIsHoveredHub(false)}
               >
-                <div className="w-64 h-40">
+                <div className="w-40 h-24 sm:h-48 sm:w-72">
                   <iframe
                     width="100%"
                     height="100%"
@@ -223,23 +296,26 @@ const Knowledge = () => {
                     allowFullScreen
                   ></iframe>
                 </div>
-                <div className="flex flex-col gap-3 p-3 pt-5 bg-red-300 h-52">
-                  <div className="text-lg bg-green-300 font-jost leading-[1.1] font-[500] text-defaultBlue line-clamp-3 uppercase">
+                <div className="flex flex-col h-40 gap-2 p-2 pt-4 bg-red-300 sm:p-3 sm:gap-3 sm:h-52">
+                  <div className="text-xs sm:text-xl bg-green-300 font-jost leading-[1.1] font-[500] text-defaultBlue line-clamp-3 uppercase">
                     {x.title}
                   </div>
-                  <div className="text-[.65rem] leading-[1.4] bg-green-700 line-clamp-4">
+                  <div className="text-[.65rem] sm:text-xs tracking-wide leading-[1.1] bg-green-700 line-clamp-4">
                     {x.description}
                   </div>
-                  <div className="flex items-center gap-2 mt-auto bg-blue-600">
+                  <a
+                    className="flex items-center gap-2 mt-auto bg-blue-600"
+                    href={x.linkedInLink}
+                  >
                     <img
                       src={x.authorImg}
                       alt="authorImg"
-                      className="rounded-full w-9 h-9"
+                      className="rounded-full w-7 h-7 sm:w-9 sm:h-9"
                     />
-                    <div className="text-[.7rem] tracking-wide text-gray-500 bg-red-900">
+                    <div className="text-[.65rem] sm:text-xs tracking-wide text-gray-500 bg-red-900">
                       {x.authorName}
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             ))}
@@ -247,21 +323,22 @@ const Knowledge = () => {
         )}
         {selectedType === "podcast" && (
           <div
-            className="flex overflow-hidden transition-transform duration-300 ease-in-out bg-red-900 gap-9"
+            className="flex gap-6 px-5 transition-transform duration-300 ease-in-out sm:px-0 sm:gap-9"
             style={{
               transform: `translateX(-${
-                currentIndexHub * (103 / itemsPerPageHub)
+                currentIndexHub *
+                ((isSmallScreen ? 188 : 103) / itemsPerPageHub)
               }%)`,
             }}
           >
             {filteredDataHub.map((x, i) => (
               <div
                 key={i}
-                className="w-64 bg-blue-100 rounded-lg shadow-md"
+                className="bg-blue-100 rounded-lg shadow-md w-72"
                 onMouseEnter={() => setIsHoveredHub(true)}
                 onMouseLeave={() => setIsHoveredHub(false)}
               >
-                <div className="w-64 h-40">
+                <div className="p-2 w-72 h-28 sm:h-48">
                   <iframe
                     src="https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og"
                     width="100%"
@@ -270,11 +347,11 @@ const Knowledge = () => {
                     allow="encrypted-media"
                   ></iframe>
                 </div>
-                <div className="flex flex-col h-32 gap-3 p-3 bg-red-300">
-                  <div className="text-lg bg-green-300 font-jost leading-[1.1] font-[500] text-defaultBlue line-clamp-2 uppercase">
+                <div className="flex flex-col h-24 gap-2 p-2 bg-red-300 sm:gap-3 sm:p-3 sm:h-32">
+                  <div className="text-sm sm:text-xl bg-green-300 font-jost leading-[1.1] font-[500] text-defaultBlue line-clamp-2 uppercase">
                     {x.title}
                   </div>
-                  <div className="text-sm leading-[1.4] bg-green-700 line-clamp-3">
+                  <div className="text-xs sm:text-sm leading-[1.4] bg-green-700 line-clamp-3">
                     {x.description}
                   </div>
                 </div>
@@ -284,7 +361,7 @@ const Knowledge = () => {
         )}
         {selectedType === "LearningPrograms" && (
           <div
-            className="flex overflow-hidden transition-transform duration-300 ease-in-out bg-red-900 gap-9"
+            className="flex gap-3 transition-transform duration-300 ease-in-out bg-red-900 sm:gap-9"
             style={{
               transform: `translateX(-${
                 currentIndexHub * (103 / itemsPerPageHub)
@@ -294,11 +371,11 @@ const Knowledge = () => {
             {filteredDataHub.map((x, i) => (
               <div
                 key={i}
-                className="w-64 bg-blue-100 rounded-lg shadow-md"
+                className="w-40 bg-blue-100 rounded-lg shadow-md sm:w-72"
                 onMouseEnter={() => setIsHoveredHub(true)}
                 onMouseLeave={() => setIsHoveredHub(false)}
               >
-                <div className="w-64 h-40">
+                <div className="w-40 h-24 sm:h-48 sm:w-72">
                   <iframe
                     width="100%"
                     height="100%"
@@ -310,10 +387,10 @@ const Knowledge = () => {
                   ></iframe>
                 </div>
                 <div className="flex flex-col h-32 gap-3 p-3 bg-red-300">
-                  <div className="text-lg bg-green-300 font-jost leading-[1.1] font-[500] text-defaultBlue line-clamp-2 uppercase">
+                  <div className="text-sm sm:text-xl bg-green-300 font-jost leading-[1.1] font-[500] text-defaultBlue line-clamp-2 uppercase">
                     {x.title}
                   </div>
-                  <div className="text-sm leading-[1.4] bg-green-700 line-clamp-3">
+                  <div className="text-xs sm:text-sm leading-[1.4] bg-green-700 line-clamp-3">
                     {x.description}
                   </div>
                 </div>
@@ -327,7 +404,7 @@ const Knowledge = () => {
               className="p-2 text-white bg-gray-800 rounded-full"
               onClick={handlePrevHub}
             >
-              Prev
+              <ChevronLeft />
             </button>
           )}
         </div>
@@ -337,7 +414,7 @@ const Knowledge = () => {
               className="p-2 text-white bg-gray-800 rounded-full"
               onClick={handleNextHub}
             >
-              Next
+              <ChevronRight />
             </button>
           )}
         </div>

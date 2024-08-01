@@ -3,7 +3,15 @@ import pic1 from "../assets/Images/pic1.jpg";
 import pic2 from "../assets/Images/pic2.jpg";
 import pic3 from "../assets/Images/pic3.jpg";
 import roundStar from "../assets/SVG/roundStar.svg";
-import { Facebook, Instagram, Youtube, Twitter } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Youtube,
+  Twitter,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import useScreenSize from "./useScreenSize";
 
 const LeaderShip = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -435,46 +443,55 @@ const LeaderShip = () => {
 
   // SLIDeeer
 
+  // bp
+
+  const { width } = useScreenSize();
+  const isSmallScreen = width < 640;
+
+  const translateXValue = !isSmallScreen
+    ? currentIndexEvents * (102.2 / itemsPerPageEvents)
+    : currentIndexEvents * (152 / itemsPerPageEvents);
+
   return (
     <section
       id="leadership"
-      className="flex flex-col items-end justify-between h-screen overflow-hidden text-white bg-blue-600"
+      className="flex flex-col items-end justify-between h-full overflow-hidden text-white bg-blue-600 sm:h-screen"
     >
-      <div className="relative w-full h-24 bg-white">
+      <div className="relative w-full mb-24 bg-red-400 sm:mb-0 h-14 sm:h-24">
         <img
           src={roundStar}
           alt="roundStar"
-          className="absolute left-[45%] top-16 scale-125"
+          className="absolute scale-90 -translate-x-1/2 left-1/2 top-5 sm:top-16 sm:scale-125"
         />
       </div>
-      <div className="flex w-full px-5 mx-auto mb-16 bg-green-400">
-        <div className="bg-red-300 w-[37%] px-32 pr-28 flex flex-col my-auto ">
-          <div className="relative inline-block text-2xl font-semibold bg-blue-500 mb-7 font-jost">
+      <div className="flex flex-col w-full px-5 mx-auto mb-16 bg-green-400 sm:flex-row">
+        <div className="bg-red-300 sm:w-[37%] sm:px-32 sm:pr-28 flex flex-col my-auto">
+          <div className="relative inline-block mb-4 text-xl font-semibold bg-blue-500 sm:text-3xl sm:mb-7 font-jost">
             LEADERSHIP
             <span className="custom-border"></span>
           </div>
-          <div className="text-base font-semibold tracking-wide leading-[1.6] mb-7 bg-red-500">
+          <div className=" text-sm sm:text-lg font-semibold tracking-wider leading-[1.6] mb-4  sm:mb-7  bg-red-500">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
 
-          <div className="relative min-w-[65%] w-[65%] ">
+          <div className="relative min-w-[60%] sm:mb-0 mb-2 w-[60%] ">
             <div
-              className={`px-10 py-2 font-semibold text-white bg-red-600 outline-none cursor-pointer
+              className={`px-5 sm:px-10 sm:py-3 py-2 text-sm sm:text-base font-semibold text-white bg-red-600 outline-none cursor-pointer
     select-selected ${isOpen ? "select-arrow-active" : ""}`}
               onClick={() => setIsOpen(!isOpen)}
             >
               {selectedCity}
             </div>
             <div
-              className={`select-items absolute left-0 right-0 bg-red-600 ${
+              className={`select-items z-20 absolute left-0 right-0 bg-red-600 ${
                 isOpen ? "select-show" : "select-hide"
               }`}
             >
               {cities.map((city) => (
                 <div
                   key={city}
-                  className="px-10 py-2 font-semibold text-white cursor-pointer hover:bg-red-700"
+                  className="px-5 py-1 text-sm font-semibold text-white bg-red-100 cursor-pointer sm:py-2 sm:text-base sm:px-10 hover:bg-red-700"
                   onClick={() => handleOptionClick(city)}
                 >
                   {city}
@@ -483,10 +500,10 @@ const LeaderShip = () => {
             </div>
           </div>
         </div>
-        <div className="bg-blue-100 w-[63%] ">
-          <div className="flex mb-3 bg-green-700 gap-9">
+        <div className="bg-blue-100 sm:mt-0 mt-6 sm:w-[63%] ">
+          <div className="flex mb-4 sm:mb-3 mx-[.40rem] bg-green-700 gap-7">
             <button
-              className={`pb-1 text-lg font-medium text-left  border-b-2 border-red-900 min-w-64 font-jost ${
+              className={`py-1 px-2 text-sm min-w-32 sm:text-xl font-medium text-left  border-b-2 border-red-900 sm:min-w-72 font-jost ${
                 selectedType === "mentor" ? "bg-green-200" : "bg-red-300"
               } `}
               onClick={() => handleTypeClick("mentor")}
@@ -494,7 +511,7 @@ const LeaderShip = () => {
               MENTOR
             </button>
             <button
-              className={`pb-1 text-lg font-medium text-left  border-b-2 border-red-900 min-w-64 font-jost ${
+              className={`py-1 px-2 text-sm min-w-32 sm:text-xl font-medium text-left  border-b-2 border-red-900 sm:min-w-72 font-jost ${
                 selectedType === "core team" ? "bg-green-200" : "bg-red-300"
               } `}
               onClick={() => handleTypeClick("core team")}
@@ -508,40 +525,48 @@ const LeaderShip = () => {
             onMouseLeave={() => setIsHoveredEvents(false)}
           >
             <div
-              className="flex transition-transform duration-300 ease-in-out bg-red-900 gap-9 "
+              className="flex gap-0 transition-transform duration-300 ease-in-out bg-red-900 sm:gap-5 "
               style={{
-                transform: `translateX(-${
-                  currentIndexEvents * (103.65 / itemsPerPageEvents)
-                }%)`,
+                transform: `translateX(-${translateXValue}%)`,
               }}
+              // style={{
+              //   transform: `translateX(-${
+              //     currentIndexEvents * (152 / itemsPerPageEvents)
+              //   }%)`,
+              // }}
+              // style={{
+              //   transform: `translateX(-${
+              //     currentIndexEvents * (102.2 / itemsPerPageEvents)
+              //   }%)`,
+              // }}
             >
               {filteredMembers.map((member, index) => (
                 <div
                   key={index}
-                  className="relative flex-shrink-0 w-64 overflow-hidden bg-transparent group"
+                  className="relative flex-shrink-0 mx-[.27rem] sm:mx-[.3rem] overflow-hidden bg-transparent w-40 sm:w-72 group"
                 >
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="object-cover w-64 mb-6 h-[21rem] transition-all shadow-lg duration-300 group-hover:blur-sm"
+                    className="object-cover w-40 sm:w-72 mb-6 h-[12rem] sm:h-[24rem] transition-all shadow-lg duration-300 group-hover:blur-sm"
                   />
-                  <div className="absolute shadow-lg bottom-0 left-0 w-[85%] mx-auto right-0 p-4 py-5 text-white transition-transform duration-300 ease-in-out bg-darkBlue border-b-4  translate-y-full  group-hover:translate-y-0">
-                    <h3 className="mb-1 text-lg font-semibold text-center line-clamp-4">
+                  <div className="absolute shadow-lg bottom-0 left-0 w-[85%] mx-auto right-0 p-3 sm:p-4 sm:py-5 text-white transition-transform duration-300 ease-in-out bg-darkBlue border-b-4  translate-y-full  group-hover:translate-y-0">
+                    <h3 className="mb-1 text-base font-semibold leading-[1.1] text-center sm:leading-normal sm:text-lg line-clamp-2 sm:line-clamp-4">
                       {member.name}
                     </h3>
-                    <p className="text-[.6rem] mb-5 text-center font-medium line-clamp-3">
+                    <p className="text-[.6rem] sm:text-[.65rem] mb-2 sm:mb-5 text-center font-medium line-clamp-3">
                       - {member.position} -
                     </p>
-                    <p className="text-[.55rem] leading-relaxed line-clamp-6">
+                    <p className="text-[.5rem] sm:text-[.65rem] leading-relaxed line-clamp-6">
                       {member.description}
                     </p>
-                    <div className="flex justify-between items-center mx-auto mt-4 w-[80%]">
+                    <div className="flex justify-between items-center mx-auto mt-2 sm:mt-4 w-[80%]">
                       {member.links.fbLink && (
                         <a
                           href={member.links.fbLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 w-7"
+                          className="w-5 p-1 sm:p-2 sm:w-7"
                         >
                           <Facebook className="w-full h-full text-white" />
                         </a>
@@ -551,7 +576,7 @@ const LeaderShip = () => {
                           href={member.links.instaLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 w-7"
+                          className="w-5 p-1 sm:p-2 sm:w-7"
                         >
                           <Instagram className="w-full h-full text-white" />
                         </a>
@@ -561,7 +586,7 @@ const LeaderShip = () => {
                           href={member.links.ytLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 w-7"
+                          className="w-5 p-1 sm:p-2 sm:w-7"
                         >
                           <Youtube className="w-full h-full text-white" />
                         </a>
@@ -571,18 +596,18 @@ const LeaderShip = () => {
                           href={member.links.twitterLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 w-7"
+                          className="w-5 p-1 sm:p-2 sm:w-7"
                         >
                           <Twitter className="w-full h-full text-white" />
                         </a>
                       )}
                     </div>
                   </div>
-                  <div className="absolute shadow-lg bottom-0 left-0 w-[85%] mx-auto text-center right-0 p-4 text-white transition-all duration-300 border-b-4 bg-darkBlue group-hover:opacity-0 translate-y-0 group-hover:translate-y-full">
-                    <h3 className="mb-1 text-lg font-semibold line-clam-4">
+                  <div className="absolute shadow-lg bottom-0 left-0 w-[85%] mx-auto text-center right-0 sm:p-4 p-2 text-white transition-all duration-300 border-b-4 bg-darkBlue group-hover:opacity-0 translate-y-0 group-hover:translate-y-full">
+                    <h3 className="mb-1 text-base font-semibold leading-tight text-center sm:leading-normal sm:text-lg line-clamp-2 sm:line-clamp-4">
                       {member.name}
                     </h3>
-                    <p className="text-[.6rem] font-medium line-clam-3">
+                    <p className="text-[.65rem] text-center font-medium line-clamp-3">
                       - {member.position} -
                     </p>
                   </div>
@@ -595,7 +620,7 @@ const LeaderShip = () => {
                   className="p-2 text-white bg-gray-800 rounded-full"
                   onClick={handlePrevEvents}
                 >
-                  Prev
+                  <ChevronLeft />
                 </button>
               )}
             </div>
@@ -606,7 +631,7 @@ const LeaderShip = () => {
                   className="p-2 text-white bg-gray-800 rounded-full"
                   onClick={handleNextEvents}
                 >
-                  Next
+                  <ChevronRight />
                 </button>
               )}
             </div>
