@@ -1,19 +1,19 @@
 import Header from "./Components/Header";
-import AboutUs from "./Components/AboutUs";
 import Events from "./Components/Events";
+import Footer from "./Components/Footer";
+import Banner from "./Components/Banner";
+import AboutUs from "./Components/AboutUs";
+import Partners from "./Components/Partners";
 import Knowledge from "./Components/Knowledge";
 import LeaderShip from "./Components/LeaderShip";
 import OurService from "./Components/OurService";
-import Partners from "./Components/Partners";
-import Testimonials from "./Components/Testimonials";
-import Footer from "./Components/Footer";
 import LandingPage from "./Components/LandingPage";
-import Banner from "./Components/Banner";
+import Testimonials from "./Components/Testimonials";
 
 function App() {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <LandingPage />
       <AboutUs />
       <OurService />

@@ -86,16 +86,16 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-green-800  text-white flex justify-between max-w-7xl sm:h-[6.6rem] h-[4rem] sm:px-9 mx-auto items-center relative z-50">
-      <div className="relative flex items-center flex-grow sm:flex-grow-0">
+    <header className="bg-green-800  text-white flex justify-between max-w-7xl lg:h-[6.6rem] md:h-[6rem] h-[3.5rem] lg:px-9 mx-auto items-center relative z-50">
+      <div className="relative flex items-center flex-grow lg:flex-grow-0">
         {/* Hamburger menu for smaller screens */}
-        <div className="absolute left-3 sm:hidden">
+        <div className="absolute left-3 lg:hidden">
           <button
             onClick={toggleMenu}
             className="text-white focus:outline-none hamburger-button"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5 md:w-10 md:h-10"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -122,12 +122,12 @@ const Header = () => {
         <img
           src={logo}
           alt="logo"
-          className="sm:w-[14.3rem] mx-auto w-[10rem] h-auto bg-red-900"
+          className="lg:w-[14.3rem] md:w-[15rem] mx-auto w-[9rem] h-auto bg-red-900"
         />
       </div>
 
       {/* Navigation links for larger screens */}
-      <nav className="items-center justify-between hidden gap-4 text-base bg-yellow-200 sm:flex">
+      <nav className="items-center justify-between hidden gap-4 text-base bg-yellow-200 lg:flex">
         <a
           href="#home"
           className="px-4 py-2 font-bold text-center bg-red-300 min-w-28"
@@ -184,17 +184,17 @@ const Header = () => {
       <nav
         className={`fixed top-0 left-0 w-[55%] h-full bg-gray-100 flex flex-col items-start p-4 gap-3 text-base transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out sm:hidden z-40 overflow-y-auto`}
+        } transition-transform duration-300 ease-in-out lg:hidden z-40 overflow-y-auto`}
       >
         <div className="flex items-center justify-between w-full mb-4">
           <img
             src={logo}
             alt="logo"
-            className="w-3/4 h-auto p-1 bg-white rounded-lg"
+            className="w-3/4 md:w-[60%] h-auto p-1 bg-white rounded-lg"
           />
           <button
             onClick={toggleMenu}
-            className="p-1 text-3xl text-white rounded-full bg-lightBlue focus:outline-none"
+            className="p-1 text-3xl text-white rounded-full md:text-5xl bg-lightBlue focus:outline-none"
           >
             <ChevronLeft />
           </button>
@@ -202,49 +202,49 @@ const Header = () => {
         <a
           href="#home"
           onClick={handleNavClick}
-          className="w-full px-4 py-2 font-bold text-left text-white transition-colors duration-200 rounded-md bg-lightBlue "
+          className="w-full px-4 py-2 text-base font-bold text-left text-white transition-colors duration-200 rounded-md md:py-4 md:text-2xl bg-lightBlue "
         >
           Home
         </a>
         <a
           href="#about-us"
           onClick={handleNavClick}
-          className="w-full px-4 py-2 font-bold text-left text-white transition-colors duration-200 rounded-md bg-lightBlue"
+          className="w-full px-4 py-2 text-base font-bold text-left text-white transition-colors duration-200 rounded-md md:py-4 md:text-2xl bg-lightBlue"
         >
           About Us
         </a>
         <a
           href="#events"
           onClick={handleNavClick}
-          className="w-full px-4 py-2 font-bold text-left text-white transition-colors duration-200 rounded-md bg-lightBlue"
+          className="w-full px-4 py-2 text-base font-bold text-left text-white transition-colors duration-200 rounded-md md:py-4 md:text-2xl bg-lightBlue"
         >
           Network
         </a>
         <a
           href="#leadership"
           onClick={handleNavClick}
-          className="w-full px-4 py-2 font-bold text-left text-white transition-colors duration-200 rounded-md bg-lightBlue"
+          className="w-full px-4 py-2 text-base font-bold text-left text-white transition-colors duration-200 rounded-md md:py-4 md:text-2xl bg-lightBlue"
         >
           Leadership
         </a>
         <a
           href="#our-service"
           onClick={handleNavClick}
-          className="w-full px-4 py-2 font-bold text-left text-white transition-colors duration-200 rounded-md bg-lightBlue"
+          className="w-full px-4 py-2 text-base font-bold text-left text-white transition-colors duration-200 rounded-md md:py-4 md:text-2xl bg-lightBlue"
         >
           Our Services
         </a>
         <a
           href="#partners"
           onClick={handleNavClick}
-          className="w-full px-4 py-2 font-bold text-left text-white transition-colors duration-200 rounded-md bg-lightBlue"
+          className="w-full px-4 py-2 text-base font-bold text-left text-white transition-colors duration-200 rounded-md md:py-4 md:text-2xl bg-lightBlue"
         >
           Events
         </a>
         <a
           href="#testimonials"
           onClick={handleNavClick}
-          className="w-full px-4 py-2 font-bold text-left text-white transition-colors duration-200 rounded-md bg-lightBlue"
+          className="w-full px-4 py-2 text-base font-bold text-left text-white transition-colors duration-200 rounded-md md:py-4 md:text-2xl bg-lightBlue"
         >
           Knowledge Hub
         </a>

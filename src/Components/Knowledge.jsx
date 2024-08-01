@@ -230,20 +230,20 @@ const Knowledge = () => {
   return (
     <section
       id="knwoledge"
-      className="flex flex-col h-full p-5 overflow-hidden bg-orange-600 sm:p-0 sm:pl-40 sm:pr-24 sm:h-screen "
+      className="flex flex-col h-full p-5 my-0 overflow-hidden bg-orange-600 lg:my-0 md:my-10 lg:p-0 lg:pl-40 lg:pr-24 lg:h-screen "
     >
-      <div className="max-w-2xl mb-5 bg-red-200 sm:mb-10">
-        <div className="mb-3 text-xl font-semibold leading-tight text-left bg-green-300 sm:text-3xl sm:mb-9 font-jost">
+      <div className="max-w-2xl mb-5 bg-red-200 md:mb-10 lg:mb-10">
+        <div className="mb-3 text-xl font-semibold leading-tight text-left bg-green-300 md:text-3xl lg:text-3xl lg:mb-9 font-jost">
           KNOWLEGDE HUB
         </div>
-        <div className="bg-green-400 text-sm sm:text-lg font-semibold text-left tracking-wider leading-[1.55] mx-auto">
+        <div className="bg-green-400 text-sm lg:text-lg font-semibold text-left md:leading-[1.7] md:text-xl tracking-wider lg:leading-[1.55] mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
         </div>
       </div>
-      <div className="flex bg-green-700 mb-3 sm:mb-9 gap-0 justify-between sm:justify-normal sm:gap-9 sm:mx-[.15rem]">
+      <div className="flex bg-green-700 mb-3 lg:mb-9 md:mb-4 gap-0 justify-between lg:justify-normal lg:gap-9 lg:mx-[.15rem]">
         <button
-          className={`pb-2 text-xs px-1 pt-1 sm:text-xl font-medium text-left border-b-2 border-red-900  min-w-20 sm:min-w-40 sm:w-72 font-jost ${
+          className={`pb-2 text-xs px-1 pt-1 md:text-2xl lg:text-xl md:text-lg font-medium text-left border-b-2 border-red-900  min-w-20 lg:min-w-40 lg:w-72 md:w-72 font-jost ${
             selectedType === "pepTalks" ? "bg-green-200" : "bg-red-300"
           }`}
           onClick={() => handleTypeClick("pepTalks")}
@@ -251,7 +251,7 @@ const Knowledge = () => {
           Pep Talks
         </button>
         <button
-          className={`pb-2 text-xs px-1 pt-1 sm:text-xl font-medium text-left border-b-2 border-red-900  min-w-20 sm:min-w-40 sm:w-72 font-jost ${
+          className={`pb-2 text-xs px-1 pt-1 md:text-2xl lg:text-xl md:text-lg font-medium text-left border-b-2 border-red-900  min-w-20 lg:min-w-40 lg:w-72 md:w-72 font-jost ${
             selectedType === "podcast" ? "bg-green-200" : "bg-red-300"
           }`}
           onClick={() => handleTypeClick("podcast")}
@@ -259,7 +259,7 @@ const Knowledge = () => {
           Podcast
         </button>
         <button
-          className={`pb-2 text-xs px-1 pt-1 sm:text-xl font-medium text-left border-b-2 border-red-900  min-w-20 sm:min-w-40 sm:w-72 font-jost ${
+          className={`pb-2 text-xs px-1 pt-1 md:text-2xl lg:text-xl md:text-lg font-medium text-left border-b-2 border-red-900  min-w-20 lg:min-w-40 lg:w-72 md:w-72 font-jost ${
             selectedType === "LearningPrograms" ? "bg-green-200" : "bg-red-300"
           }`}
           onClick={() => handleTypeClick("LearningPrograms")}
@@ -268,10 +268,10 @@ const Knowledge = () => {
         </button>
       </div>
 
-      <div className="relative px-[.1rem] sm:px-[.15rem] overflow-hidden bg-red-900">
+      <div className="relative px-[.1rem] lg:px-[.15rem] overflow-hidden bg-red-900">
         {selectedType === "pepTalks" && (
           <div
-            className="flex gap-3 transition-transform duration-300 ease-in-out bg-red-900 sm:gap-9"
+            className="flex gap-3 transition-transform duration-300 ease-in-out bg-red-900 lg:gap-9 md:gap-9"
             style={{
               transform: `translateX(-${
                 currentIndexHub * (103 / itemsPerPageHub)
@@ -281,11 +281,11 @@ const Knowledge = () => {
             {filteredDataHub.map((x, i) => (
               <div
                 key={i}
-                className="w-40 bg-blue-100 rounded-lg shadow-md sm:w-72"
+                className="w-40 bg-blue-100 rounded-lg shadow-md lg:w-72 md:w-72"
                 onMouseEnter={() => setIsHoveredHub(true)}
                 onMouseLeave={() => setIsHoveredHub(false)}
               >
-                <div className="w-40 h-24 sm:h-48 sm:w-72">
+                <div className="w-40 h-24 lg:h-48 md:h-48 lg:w-72 md:w-72">
                   <iframe
                     width="100%"
                     height="100%"
@@ -296,11 +296,11 @@ const Knowledge = () => {
                     allowFullScreen
                   ></iframe>
                 </div>
-                <div className="flex flex-col h-40 gap-2 p-2 pt-4 bg-red-300 sm:p-3 sm:gap-3 sm:h-52">
-                  <div className="text-xs sm:text-xl bg-green-300 font-jost leading-[1.1] font-[500] text-defaultBlue line-clamp-3 uppercase">
+                <div className="flex flex-col h-40 gap-2 p-2 pt-4 bg-red-300 lg:p-3 lg:gap-3 lg:h-52">
+                  <div className="text-xs lg:text-xl md:text-lg bg-green-300 font-jost leading-[1.1] font-[500] text-defaultBlue line-clamp-3 uppercase">
                     {x.title}
                   </div>
-                  <div className="text-[.65rem] sm:text-xs tracking-wide leading-[1.1] bg-green-700 line-clamp-4">
+                  <div className="text-[.65rem] lg:text-xs tracking-wide leading-[1.1] bg-green-700 line-clamp-4">
                     {x.description}
                   </div>
                   <a
@@ -310,9 +310,9 @@ const Knowledge = () => {
                     <img
                       src={x.authorImg}
                       alt="authorImg"
-                      className="rounded-full w-7 h-7 sm:w-9 sm:h-9"
+                      className="rounded-full w-7 h-7 lg:w-9 lg:h-9"
                     />
-                    <div className="text-[.65rem] sm:text-xs tracking-wide text-gray-500 bg-red-900">
+                    <div className="text-[.65rem] lg:text-xs tracking-wide text-gray-500 bg-red-900">
                       {x.authorName}
                     </div>
                   </a>
@@ -323,7 +323,7 @@ const Knowledge = () => {
         )}
         {selectedType === "podcast" && (
           <div
-            className="flex gap-6 px-5 transition-transform duration-300 ease-in-out sm:px-0 sm:gap-9"
+            className="flex gap-6 px-5 transition-transform duration-300 ease-in-out lg:px-0 lg:gap-9 md:gap-9"
             style={{
               transform: `translateX(-${
                 currentIndexHub *
@@ -338,7 +338,7 @@ const Knowledge = () => {
                 onMouseEnter={() => setIsHoveredHub(true)}
                 onMouseLeave={() => setIsHoveredHub(false)}
               >
-                <div className="p-2 w-72 h-28 sm:h-48">
+                <div className="p-2 w-72 h-28 lg:h-48 md:h-48">
                   <iframe
                     src="https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og"
                     width="100%"
@@ -347,11 +347,11 @@ const Knowledge = () => {
                     allow="encrypted-media"
                   ></iframe>
                 </div>
-                <div className="flex flex-col h-24 gap-2 p-2 bg-red-300 sm:gap-3 sm:p-3 sm:h-32">
-                  <div className="text-sm sm:text-xl bg-green-300 font-jost leading-[1.1] font-[500] text-defaultBlue line-clamp-2 uppercase">
+                <div className="flex flex-col h-24 gap-2 p-2 bg-red-300 lg:gap-3 lg:p-3 lg:h-32">
+                  <div className="text-sm lg:text-xl md:text-lg bg-green-300 font-jost leading-[1.1] font-[500] text-defaultBlue line-clamp-2 uppercase">
                     {x.title}
                   </div>
-                  <div className="text-xs sm:text-sm leading-[1.4] bg-green-700 line-clamp-3">
+                  <div className="text-xs lg:text-sm leading-[1.4] bg-green-700 line-clamp-3">
                     {x.description}
                   </div>
                 </div>
@@ -361,7 +361,7 @@ const Knowledge = () => {
         )}
         {selectedType === "LearningPrograms" && (
           <div
-            className="flex gap-3 transition-transform duration-300 ease-in-out bg-red-900 sm:gap-9"
+            className="flex gap-3 transition-transform duration-300 ease-in-out bg-red-900 lg:gap-9 md:gap-9"
             style={{
               transform: `translateX(-${
                 currentIndexHub * (103 / itemsPerPageHub)
@@ -371,11 +371,11 @@ const Knowledge = () => {
             {filteredDataHub.map((x, i) => (
               <div
                 key={i}
-                className="w-40 bg-blue-100 rounded-lg shadow-md sm:w-72"
+                className="w-40 bg-blue-100 rounded-lg shadow-md lg:w-72 md:w-72"
                 onMouseEnter={() => setIsHoveredHub(true)}
                 onMouseLeave={() => setIsHoveredHub(false)}
               >
-                <div className="w-40 h-24 sm:h-48 sm:w-72">
+                <div className="w-40 h-24 lg:h-48 md:h-48 lg:w-72 md:w-72">
                   <iframe
                     width="100%"
                     height="100%"
@@ -387,10 +387,10 @@ const Knowledge = () => {
                   ></iframe>
                 </div>
                 <div className="flex flex-col h-32 gap-3 p-3 bg-red-300">
-                  <div className="text-sm sm:text-xl bg-green-300 font-jost leading-[1.1] font-[500] text-defaultBlue line-clamp-2 uppercase">
+                  <div className="text-sm lg:text-xl md:text-lg bg-green-300 font-jost leading-[1.1] font-[500] text-defaultBlue line-clamp-2 uppercase">
                     {x.title}
                   </div>
-                  <div className="text-xs sm:text-sm leading-[1.4] bg-green-700 line-clamp-3">
+                  <div className="text-xs lg:text-sm leading-[1.4] bg-green-700 line-clamp-3">
                     {x.description}
                   </div>
                 </div>

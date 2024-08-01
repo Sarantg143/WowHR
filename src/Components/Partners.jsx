@@ -8,16 +8,16 @@ const Partners = () => {
   return (
     <section
       id="partners"
-      className="flex flex-col items-center justify-center h-full overflow-hidden bg-red-600 sm:h-screen"
+      className="flex flex-col items-center justify-center h-full overflow-hidden bg-red-600 md:h-full sm:h-screen"
     >
       <div className="bg-green-100 my-7 sm:mt-0 sm:mb-24">
         <Banner />
       </div>
       <div className="max-w-6xl bg-red-200">
-        <div className="mb-5 text-xl font-semibold text-center bg-green-300 sm:text-3xl font-jost sm:mb-9">
+        <div className="mb-5 text-xl font-semibold text-center bg-green-300 sm:text-3xl md:text-4xl font-jost sm:mb-9">
           BUSINESS PARTNERS
         </div>
-        <div className="bg-green-400 text-xs sm:text-lg font-semibold text-center tracking-wider leading-[1.9] mb-20 mx-auto w-[78%]">
+        <div className="bg-green-400 md:text-2xl text-xs sm:text-lg font-semibold text-center tracking-wider lg:leading-[1.9] md:leading-[1.7] mb-20 mx-auto w-[78%]">
           To be one of the pioneering, dynamic and leading companies that offer
           quality products and services with an understanding of continuous
           improvement in the fields in which it operates.
