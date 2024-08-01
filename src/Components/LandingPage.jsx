@@ -6,9 +6,9 @@ const LandingPage = () => {
   return (
     <section
       id="home"
-      className="bg-red-900 lg:h-[87vh] lg:flex overflow-hidden"
+      className="bg-red-900  sm:h-[87vh] sm:flex overflow-hidden"
     >
-      <div className="bg-red-500 lg:w-1/2 ">
+      <div className="bg-red-500 sm:w-1/2 ">
         <img src={framedStar} alt="framestr" className="w-1/2 sm:w-auto" />
         <div className="bg-blue-300 sm:w-[75%] w-[80%] sm:h-[60%] flex flex-col mx-auto sm:translate-x-10 translate-y-[-8%]">
           <div className="bg-green-300 sm:mb-12 mb-4 font-semibold font-jost text-xl sm:text-5xl tracking-[-0.06em] leading-[1.25]">
