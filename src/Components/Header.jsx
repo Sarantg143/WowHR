@@ -58,6 +58,16 @@
 // export default Header;
 import { useState, useEffect } from "react";
 import { ChevronLeft } from "lucide-react";
+import {
+  Home,
+  Info,
+  Users,
+  Award,
+  Briefcase,
+  Calendar,
+  MessageCircle,
+} from "lucide-react";
+
 import logo from "../assets/Images/WowHRLogo.png";
 
 const Header = () => {
@@ -125,7 +135,6 @@ const Header = () => {
           className="lg:w-[14.3rem] md:w-[15rem] mx-auto w-[9rem] h-auto bg-red-900"
         />
       </div>
-
       {/* Navigation links for larger screens */}
       <nav className="items-center justify-between hidden gap-4 text-base bg-yellow-200 lg:flex">
         <a
@@ -171,7 +180,6 @@ const Header = () => {
           Knowledge Hub
         </a>
       </nav>
-
       {/* Black Overlay for mobile menu */}
       {isOpen && (
         <div
@@ -179,9 +187,8 @@ const Header = () => {
           onClick={toggleMenu}
         ></div>
       )}
-
       {/* Overlay Navigation for mobile */}
-      <nav
+      {/* <nav
         className={`fixed top-0 left-0 w-[55%] h-full bg-gray-100 flex flex-col items-start p-4 gap-3 text-base transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out lg:hidden z-40 overflow-y-auto`}
@@ -248,6 +255,77 @@ const Header = () => {
         >
           Knowledge Hub
         </a>
+      </nav> */}
+      {/* backdrop-blur-lg bg-gray-100 bg-opacity-[.7] */}
+      <nav
+        className={`fixed top-0 left-0 w-[55%] h-full  flex flex-col  items-center bg-white p-1 gap-4 text-base transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out lg:hidden z-40 overflow-y-auto`}
+      >
+        <div className="flex items-center justify-between w-full p-1 px-2 bg-white">
+          <img
+            src={logo}
+            alt="logo"
+            className="w-3/4 md:w-[60%] h-auto p-2 bg-white rounded-lg"
+          />
+          <button
+            onClick={toggleMenu}
+            className="p-1 px-2 text-white rounded-full bg-lightBlue focus:outline-none"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+        </div>
+        <div className="flex h-[60%] w-[90%] justify-between flex-col gap-3 p-4 bg-gray-400  shadow-xl bg-opacity-30 rounded-2xl ">
+          <a
+            href="#home"
+            onClick={handleNavClick}
+            className="flex items-center w-full px-4 py-2 text-sm font-bold text-left text-white transition-colors duration-200 rounded-md shadow-xl md:py-4 md:text-2xl bg-lightBlue"
+          >
+            <Home className="w-5 h-5 mr-2" /> Home
+          </a>
+          <a
+            href="#about-us"
+            onClick={handleNavClick}
+            className="flex items-center w-full px-4 py-2 text-sm font-bold text-left text-white transition-colors duration-200 rounded-md shadow-xl md:py-4 md:text-2xl bg-lightBlue"
+          >
+            <Info className="w-5 h-5 mr-2" /> About Us
+          </a>
+          <a
+            href="#events"
+            onClick={handleNavClick}
+            className="flex items-center w-full px-4 py-2 text-sm font-bold text-left text-white transition-colors duration-200 rounded-md shadow-xl md:py-4 md:text-2xl bg-lightBlue"
+          >
+            <Users className="w-5 h-5 mr-2" /> Network
+          </a>
+          <a
+            href="#leadership"
+            onClick={handleNavClick}
+            className="flex items-center w-full px-4 py-2 text-sm font-bold text-left text-white transition-colors duration-200 rounded-md shadow-xl md:py-4 md:text-2xl bg-lightBlue"
+          >
+            <Award className="w-5 h-5 mr-2" /> Leadership
+          </a>
+          <a
+            href="#our-service"
+            onClick={handleNavClick}
+            className="flex items-center w-full px-4 py-2 text-sm font-bold text-left text-white transition-colors duration-200 rounded-md shadow-xl md:py-4 md:text-2xl bg-lightBlue"
+          >
+            <Briefcase className="w-5 h-5 mr-2" /> Our Services
+          </a>
+          <a
+            href="#partners"
+            onClick={handleNavClick}
+            className="flex items-center w-full px-4 py-2 text-sm font-bold text-left text-white transition-colors duration-200 rounded-md shadow-xl md:py-4 md:text-2xl bg-lightBlue"
+          >
+            <Calendar className="w-5 h-5 mr-2" /> Events
+          </a>
+          <a
+            href="#testimonials"
+            onClick={handleNavClick}
+            className="flex items-center w-full px-4 py-2 text-sm font-bold text-left text-white transition-colors duration-200 rounded-md shadow-xl md:py-4 md:text-2xl bg-lightBlue"
+          >
+            <MessageCircle className="w-5 h-5 mr-2" /> Knowledge Hub
+          </a>
+        </div>
       </nav>
     </header>
   );

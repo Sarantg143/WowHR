@@ -9,10 +9,13 @@ import LeaderShip from "./Components/LeaderShip";
 import OurService from "./Components/OurService";
 import LandingPage from "./Components/LandingPage";
 import Testimonials from "./Components/Testimonials";
+import LoadingPage from "./Components/LoadingPage";
 
 function App() {
   return (
     <div>
+      {/* <LoadingPage /> */}
+
       <Header />
       <LandingPage />
       <AboutUs />
