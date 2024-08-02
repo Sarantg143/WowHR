@@ -131,7 +131,7 @@ const Header = () => {
           Events
         </a>
         <a
-          href="#testimonials"
+          href="#knowledge"
           className="px-4 py-2 mb-0 font-bold text-center text-black transition-all duration-300 rounded-lg hover:shadow-lg hover:mb-2 min-w-28 hover:text-white hover:bg-[#089adec1]"
         >
           Knowledge Hub
@@ -209,7 +209,7 @@ const Header = () => {
             <Calendar className="w-5 h-5 mr-2 lg:w-10 lg:h-10 lg:mr-5" /> Events
           </a>
           <a
-            href="#testimonials"
+            href="#knowledge"
             onClick={handleNavClick}
             className="flex items-center w-full px-4 py-2 text-sm font-bold text-left text-white transition-colors duration-200 rounded-md shadow-xl lg:text-3xl md:py-4 md:text-2xl bg-lightBlue"
           >

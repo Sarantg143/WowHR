@@ -229,7 +229,7 @@ const Knowledge = () => {
 
   return (
     <section
-      id="knwoledge"
+      id="knowledge"
       className="flex flex-col h-full p-5 my-0 overflow-hidden bg-white cursor-default xl:mt-14 xl:my-0 md:my-10 xl:p-0 xl:pl-40 xl:pr-24 xl:h-screen "
     >
       <div
