@@ -455,29 +455,45 @@ const LeaderShip = () => {
   return (
     <section
       id="leadership"
-      className="flex flex-col items-end justify-between h-full overflow-hidden text-white bg-blue-600 lg:h-screen"
+      className="flex flex-col items-end justify-between h-full overflow-hidden text-white bg-blue-600 xl:h-screen"
     >
-      <div className="relative w-full mb-24 bg-red-400 lg:mb-0 h-14 lg:h-24">
+      <div
+        className="relative w-full mb-24 xl:mb-0 h-14 xl:h-24"
+        data-aos="zoom-in"
+        data-aos-duration="500"
+      >
         <img
           src={roundStar}
           alt="roundStar"
-          className="absolute scale-90 -translate-x-1/2 left-1/2 top-5 lg:top-16 lg:scale-125"
+          className="absolute scale-90 -translate-x-1/2 left-1/2 top-5 xl:top-16 xl:scale-125"
         />
       </div>
-      <div className="flex flex-col w-full px-5 mx-auto mb-16 bg-green-400 lg:flex-row">
-        <div className="bg-red-300 lg:w-[37%] lg:px-32 lg:pr-28 flex flex-col my-auto">
-          <div className="relative inline-block mb-4 text-xl font-semibold bg-blue-500 lg:text-3xl md:text-4xl lg:mb-7 font-jost">
+      <div className="flex flex-col w-full px-5 mx-auto mb-16 bg-green-400 xl:flex-row">
+        <div className="bg-red-300 xl:w-[37%] xl:px-32 xl:pr-28 flex flex-col my-auto">
+          <div
+            className="relative inline-block mb-4 text-xl font-semibold bg-blue-500 xl:text-3xl md:text-4xl xl:mb-7 font-jost"
+            data-aos="fade-right"
+            data-aos-duration="500"
+          >
             LEADERSHIP
             <span className="custom-border"></span>
           </div>
-          <div className=" text-sm lg:text-lg md:text-2xl font-semibold tracking-wider md:leading-[1.7] lg:leading-[1.6] mb-4  lg:mb-7  bg-red-500">
+          <div
+            className=" text-sm xl:text-lg md:text-2xl font-semibold xl:font-normal tracking-wider md:leading-[1.7] xl:leading-[1.6] mb-4  xl:mb-7  bg-red-500"
+            data-aos="fade-right"
+            data-aos-duration="500"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
 
-          <div className="relative lg:min-w-[60%] md:w-[30%] lg:mb-0 mb-2 w-[60%] lg:w-[60%] ">
+          <div
+            className="relative xl:min-w-[60%] md:w-[30%] xl:mb-0 mb-2 w-[60%] xl:w-[60%] "
+            data-aos="fade-right"
+            data-aos-duration="500"
+          >
             <div
-              className={`px-5 lg:px-10 lg:py-3 py-2 md:text-xl text-sm lg:text-base font-semibold text-white bg-red-600 outline-none cursor-pointer
+              className={`px-5 xl:px-10 xl:py-3 py-2 md:text-xl text-sm xl:text-base font-semibold text-white bg-red-600 outline-none cursor-pointer
     select-selected ${isOpen ? "select-arrow-active" : ""}`}
               onClick={() => setIsOpen(!isOpen)}
             >
@@ -491,7 +507,7 @@ const LeaderShip = () => {
               {cities.map((city) => (
                 <div
                   key={city}
-                  className="px-5 py-1 text-sm font-semibold text-white bg-red-100 cursor-pointer md:text-xl lg:py-2 lg:text-base lg:px-10 hover:bg-red-700"
+                  className="px-5 py-1 text-sm font-semibold text-white bg-red-100 cursor-pointer md:text-xl xl:py-2 xl:text-base xl:px-10 hover:bg-red-700"
                   onClick={() => handleOptionClick(city)}
                 >
                   {city}
@@ -500,10 +516,14 @@ const LeaderShip = () => {
             </div>
           </div>
         </div>
-        <div className="bg-blue-100 lg:mt-0 mt-6 lg:w-[63%] ">
-          <div className="flex mb-4 lg:mb-3 mx-[.40rem] bg-green-700 gap-7">
+        <div className="bg-blue-100 xl:mt-0 mt-6 xl:w-[63%] ">
+          <div
+            className="flex mb-4 xl:mb-3 mx-[.40rem] bg-green-700 gap-7"
+            data-aos="fade-up"
+            data-aos-duration="500"
+          >
             <button
-              className={`py-1 px-2 md:text-xl text-sm min-w-36 lg:text-xl font-medium text-left  border-b-2 border-red-900 md:min-w-52 lg:min-w-72 font-jost ${
+              className={`py-1 px-2 md:text-xl text-sm min-w-36 xl:text-xl font-medium text-left  border-b-2 border-red-900 md:min-w-52 xl:min-w-72 font-jost ${
                 selectedType === "mentor" ? "bg-green-200" : "bg-red-300"
               } `}
               onClick={() => handleTypeClick("mentor")}
@@ -511,7 +531,7 @@ const LeaderShip = () => {
               MENTOR
             </button>
             <button
-              className={`py-1 px-2 md:min-w-52 text-sm min-w-36 md:text-xl lg:text-xl font-medium text-left  border-b-2 border-red-900 lg:min-w-72 font-jost ${
+              className={`py-1 px-2 md:min-w-52 text-sm min-w-36 md:text-xl xl:text-xl font-medium text-left  border-b-2 border-red-900 xl:min-w-72 font-jost ${
                 selectedType === "core team" ? "bg-green-200" : "bg-red-300"
               } `}
               onClick={() => handleTypeClick("core team")}
@@ -523,9 +543,11 @@ const LeaderShip = () => {
             className="relative items-center justify-center overflow-hidden bg-blue-300 "
             onMouseEnter={() => setIsHoveredEvents(true)}
             onMouseLeave={() => setIsHoveredEvents(false)}
+            data-aos="fade-left"
+            data-aos-duration="500"
           >
             <div
-              className="flex gap-0 transition-transform duration-300 ease-in-out bg-red-900 lg:gap-5 "
+              className="flex gap-0 transition-transform duration-300 ease-in-out bg-red-900 xl:gap-5 "
               style={{
                 transform: `translateX(-${translateXValue}%)`,
               }}
@@ -543,30 +565,30 @@ const LeaderShip = () => {
               {filteredMembers.map((member, index) => (
                 <div
                   key={index}
-                  className="relative flex-shrink-0 mx-[.27rem] lg:mx-[.3rem] md:mx-[.3rem] overflow-hidden bg-transparent w-40 lg:w-72 md:w-72 group"
+                  className="relative flex-shrink-0 mx-[.27rem] xl:mx-[.3rem] md:mx-[.3rem] overflow-hidden bg-transparent w-40 xl:w-72 md:w-72 group"
                 >
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="object-cover w-40 md:w-72 lg:w-72 mb-6 h-[12rem] lg:h-[24rem] md:h-[24rem] transition-all shadow-lg duration-300 group-hover:blur-sm"
+                    className="object-cover w-40 md:w-72 xl:w-72 mb-6 h-[12rem] xl:h-[24rem] md:h-[24rem] transition-all shadow-lg duration-300 group-hover:blur-sm"
                   />
-                  <div className="absolute shadow-lg bottom-0 left-0 w-[85%] mx-auto right-0 p-3 lg:p-4 lg:py-5 text-white transition-transform duration-300 ease-in-out bg-darkBlue border-b-4  translate-y-full  group-hover:translate-y-0">
-                    <h3 className="mb-1 text-base font-semibold leading-[1.1] text-center lg:leading-normal lg:text-lg line-clamp-2 lg:line-clamp-4">
+                  <div className="absolute shadow-lg bottom-0 left-0 w-[85%] mx-auto right-0 p-3 xl:p-4 xl:py-5 text-white transition-transform duration-300 ease-in-out bg-darkBlue border-b-4  translate-y-full  group-hover:translate-y-0">
+                    <h3 className="mb-1 text-base font-semibold leading-[1.1] text-center xl:leading-normal xl:text-lg line-clamp-2 xl:line-clamp-4">
                       {member.name}
                     </h3>
-                    <p className="text-[.6rem] lg:text-[.65rem] mb-2 lg:mb-5 text-center font-medium line-clamp-3">
+                    <p className="text-[.6rem] xl:text-[.65rem] mb-2 xl:mb-5 text-center font-medium line-clamp-3">
                       - {member.position} -
                     </p>
-                    <p className="text-[.5rem] lg:text-[.65rem] leading-relaxed line-clamp-6">
+                    <p className="text-[.5rem] xl:text-[.65rem] leading-relaxed line-clamp-6">
                       {member.description}
                     </p>
-                    <div className="flex justify-between items-center mx-auto mt-2 lg:mt-4 w-[80%]">
+                    <div className="flex justify-between items-center mx-auto mt-2 xl:mt-4 w-[80%]">
                       {member.links.fbLink && (
                         <a
                           href={member.links.fbLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-5 p-1 lg:p-2 lg:w-7"
+                          className="w-5 p-1 xl:p-2 xl:w-7"
                         >
                           <Facebook className="w-full h-full text-white" />
                         </a>
@@ -576,7 +598,7 @@ const LeaderShip = () => {
                           href={member.links.instaLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-5 p-1 lg:p-2 lg:w-7"
+                          className="w-5 p-1 xl:p-2 xl:w-7"
                         >
                           <Instagram className="w-full h-full text-white" />
                         </a>
@@ -586,7 +608,7 @@ const LeaderShip = () => {
                           href={member.links.ytLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-5 p-1 lg:p-2 lg:w-7"
+                          className="w-5 p-1 xl:p-2 xl:w-7"
                         >
                           <Youtube className="w-full h-full text-white" />
                         </a>
@@ -596,15 +618,15 @@ const LeaderShip = () => {
                           href={member.links.twitterLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-5 p-1 lg:p-2 lg:w-7"
+                          className="w-5 p-1 xl:p-2 xl:w-7"
                         >
                           <Twitter className="w-full h-full text-white" />
                         </a>
                       )}
                     </div>
                   </div>
-                  <div className="absolute shadow-lg bottom-0 left-0 w-[85%] mx-auto text-center right-0 lg:p-4 p-2 text-white transition-all duration-300 border-b-4 bg-darkBlue group-hover:opacity-0 translate-y-0 group-hover:translate-y-full">
-                    <h3 className="mb-1 text-base font-semibold leading-tight text-center lg:leading-normal lg:text-lg line-clamp-2 lg:line-clamp-4">
+                  <div className="absolute shadow-lg bottom-0 left-0 w-[85%] mx-auto text-center right-0 xl:p-4 p-2 text-white transition-all duration-300 border-b-4 bg-darkBlue group-hover:opacity-0 translate-y-0 group-hover:translate-y-full">
+                    <h3 className="mb-1 text-base font-semibold leading-tight text-center xl:leading-normal xl:text-lg line-clamp-2 xl:line-clamp-4">
                       {member.name}
                     </h3>
                     <p className="text-[.65rem] text-center font-medium line-clamp-3">

@@ -14,10 +14,18 @@ const Partners = () => {
         <Banner />
       </div>
       <div className="max-w-6xl bg-red-200">
-        <div className="mb-5 text-xl font-semibold text-center bg-green-300 sm:text-3xl md:text-4xl font-jost sm:mb-9">
+        <div
+          className="mb-5 text-xl font-semibold text-center bg-green-300 sm:text-3xl md:text-4xl xl:text-3xl font-jost sm:mb-9"
+          data-aos="fade-right"
+          data-aos-duration="750"
+        >
           BUSINESS PARTNERS
         </div>
-        <div className="bg-green-400 md:text-2xl text-xs sm:text-lg font-semibold text-center tracking-wider lg:leading-[1.9] md:leading-[1.7] mb-20 mx-auto w-[78%]">
+        <div
+          className="bg-green-400 md:text-2xl text-xs sm:text-lg font-semibold text-center tracking-wider lg:leading-[1.9] xl:text-lg md:leading-[1.7] mb-20 mx-auto w-[78%]"
+          data-aos="fade-right"
+          data-aos-duration="750"
+        >
           To be one of the pioneering, dynamic and leading companies that offer
           quality products and services with an understanding of continuous
           improvement in the fields in which it operates.
@@ -26,21 +34,29 @@ const Partners = () => {
           <img
             src={com1}
             alt="com1"
+            data-aos="fade-left"
+            data-aos-duration="250"
             className="object-contain w-24 h-auto bg-red-200 sm:w-44"
           />
           <img
             src={com3}
             alt="com3"
+            data-aos="fade-left"
+            data-aos-duration="500"
             className="object-contain w-24 h-auto bg-red-400 sm:w-44"
           />
           <img
             src={com2}
             alt="com2"
+            data-aos="fade-left"
+            data-aos-duration="750"
             className="object-contain w-20 h-auto bg-red-300 sm:w-36"
           />
           <img
             src={com4}
             alt="com4"
+            data-aos="fade-left"
+            data-aos-duration="1000"
             className="object-contain w-16 h-auto bg-red-500 sm:w-24"
           />
         </div>
