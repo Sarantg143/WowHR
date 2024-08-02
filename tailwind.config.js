@@ -17,6 +17,9 @@ export default {
       screens: {
         xs: "320px",
       },
+      backgroundImage: {
+        "footer-bg": "url('/footerBG.svg')",
+      },
     },
   },
   plugins: [],

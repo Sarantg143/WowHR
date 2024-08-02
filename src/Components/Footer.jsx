@@ -3,14 +3,13 @@ import f2 from "../assets/Images/f2.jpg";
 import f3 from "../assets/Images/f3.jpg";
 import f4 from "../assets/Images/f4.jpg";
 import logo from "../assets/Images/WowHRLogo.png";
-import footerBG from "../assets/SVG/footerBG.svg";
 import { MapPin, PhoneCall, AtSign } from "lucide-react";
 
 const Footer = () => {
   return (
     <section
       id="footer"
-      className="h-full my-auto overflow-hidden text-white cursor-default xl:h-screen "
+      className="h-full my-auto overflow-hidden text-white bg-black cursor-default xl:h-screen "
     >
       <div className="flex w-full h-[10rem] xl:h-[19.5rem] ">
         <img src={f1} alt="f1" className="object-cover w-1/4 xl:w-full " />
@@ -19,12 +18,7 @@ const Footer = () => {
         <img src={f4} alt="f4" className="object-cover w-1/4 xl:w-full " />
       </div>
       <div
-        className="h-full pt-8 pb-1 bg-black xl:pb-0 xl:pt-16"
-        style={{
-          backgroundImage: `url(${footerBG})`,
-          backgroundSize: "contain",
-          backgroundPosition: "top",
-        }}
+        className="h-full pt-8 pb-1 bg-top bg-contain xl:pb-0 xl:pt-16 bg-footer-bg"
         id="footerAnchor"
       >
         <div className="mx-auto xl:max-w-7xl">
