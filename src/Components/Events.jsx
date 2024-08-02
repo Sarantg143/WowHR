@@ -1,7 +1,7 @@
+import useScreenSize from "./useScreenSize";
 import event1 from "../assets/Images/events1.jpg";
 import event2 from "../assets/Images/events2.jpg";
 import event3 from "../assets/Images/events3.jpg";
-import useScreenSize from "./useScreenSize";
 import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -58,9 +58,9 @@ const Events = () => {
 
   const itemsPerPageEvents = !isSmallScreen ? 3 : 1;
 
-  const [currentIndexEvents, setCurrentIndexEvents] = useState(0);
-  const [isHoveredEvents, setIsHoveredEvents] = useState(false);
   const intervalRefEvents = useRef(null);
+  const [isHoveredEvents, setIsHoveredEvents] = useState(false);
+  const [currentIndexEvents, setCurrentIndexEvents] = useState(0);
 
   const totalItemsEvents = eventData.length;
 
@@ -101,30 +101,30 @@ const Events = () => {
   return (
     <section
       id="events"
-      className="flex flex-col items-center justify-center h-screen px-5 my-0 overflow-hidden bg-green-600 xl:my-6 md:my-20 xl:h-screen md:h-full xl:justify-between md:justify-between"
+      className="flex flex-col items-center justify-center h-full px-5 overflow-hidden bg-white cursor-default my-14 xl:my-6 md:my-20 xl:h-screen md:h-full xl:justify-between md:justify-between"
     >
       <div
-        className="max-w-2xl bg-red-200 mb-7 md:mb-12 xl:mb-0"
+        className="max-w-2xl mb-7 md:mb-12 xl:mb-0"
         data-aos="fade-right"
         data-aos-duration="500"
       >
-        <div className="mb-5 text-xl font-semibold leading-tight text-center bg-green-300 md:text-3xl xl:text-3xl xl:mb-9 font-jost">
+        <div className="mb-5 text-xl font-semibold leading-tight text-center md:text-3xl xl:text-3xl xl:mb-9 font-jost">
           EVENTS
         </div>
-        <div className="bg-green-400 text-sm md:text-xl xl:text-lg font-semibold text-center tracking-wide xl:leading-[1.55] md:leading-[1.7] mx-auto">
+        <div className="text-sm md:text-xl xl:text-lg font-semibold text-center tracking-wide xl:leading-[1.55] md:leading-[1.7] mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </div>
       </div>
       <div
-        className="relative xl:h-[73%] w-full xl:w-[81%] bg-blue-400 overflow-hidden"
+        className="relative xl:h-[73%] w-full xl:w-[81%]  overflow-hidden "
         data-aos="fade-left"
         data-aos-duration="750"
         onMouseEnter={() => setIsHoveredEvents(true)}
         onMouseLeave={() => setIsHoveredEvents(false)}
       >
         <div
-          className="flex transition-transform duration-300 ease-in-out bg-red-900 "
+          className="flex transition-transform duration-300 ease-in-out"
           style={{
             transform: `translateX(-${
               currentIndexEvents * (100 / itemsPerPageEvents)
@@ -134,7 +134,7 @@ const Events = () => {
           {eventData.map((event, index) => (
             <div
               key={index}
-              className="bg-green-300 w-[24rem] mx-[1.45rem] xl:mx-[.5rem] transition-transform duration-500 transform"
+              className=" w-[24rem] mx-[1.45rem] xl:mx-[.5rem] transition-transform duration-500 shadow-md transform"
               style={{ transition: "transform 0.5s ease-in-out" }}
             >
               <img
@@ -142,29 +142,29 @@ const Events = () => {
                 alt={`event${index + 1}`}
                 className="object-cover  xl:min-w-[24rem] xl:min-h-[24rem] max-w-[24rem] max-h-[24rem] w-[18rem] h-[18rem] xl:w-[24rem] xl:h-[24rem] "
               />
-              <div className="bg-blue-600 h-[9rem] p-2 xl:p-4 space-y-4">
-                <div className="flex items-center gap-2 xl:gap-4 text-[.6rem] xl:text-[.65rem] md:text-[.8rem] bg-red-200">
-                  <div className="p-1 px-2 font-bold text-white bg-red-300 rounded-r-full xl:px-4">
+              <div className="bg-lightestBlue h-[9rem] p-2 xl:p-4 space-y-4">
+                <div className="flex items-center gap-2 xl:gap-4 text-[.6rem] xl:text-[.65rem] md:text-[.8rem]">
+                  <div className="p-1 px-2 font-bold text-white rounded-r-full bg-defaultBlue xl:px-4">
                     {event.heading}
                   </div>
-                  <div className="flex items-center gap-2 font-bold text-gray-500 bg-red-400">
+                  <div className="flex items-center gap-2 font-bold text-gray-500">
                     <span className="relative text-base xl:text-xl md:text-lg font-bold tracking-tighter top-[2px] text-defaultBlue">
                       &#8226;
                     </span>{" "}
                     {event.date}
                   </div>
                 </div>
-                <div className="text-sm font-bold bg-green-200 xl:tracking-wide xl:text-base md:text-xl line-clamp-3">
+                <div className="text-sm font-bold xl:tracking-wide xl:text-base md:text-xl line-clamp-3">
                   {event.description}
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <div className="absolute left-0 flex justify-between px-4 top-1/2">
+        <div className="absolute left-0 flex justify-between px-4 xl:-left-[1px] top-1/2">
           {currentIndexEvents > 0 && (
             <button
-              className="p-2 text-white bg-gray-800 rounded-full"
+              className="p-2 transition-all bg-white border-2 rounded-full shadow-lg xl:border-l-0 xl:rounded-l-none xl:px-4 xl:scale-125 border-darkBlue hover:bg-lightBlue hover:text-white xl:hover:ml-[2.5px] xl:hover:px-6 text-darkBlue hover:border-white"
               onClick={handlePrevEvents}
             >
               <ChevronLeft />
@@ -172,10 +172,10 @@ const Events = () => {
           )}
         </div>
 
-        <div className="absolute right-0 flex justify-between px-4 top-1/2">
+        <div className="absolute right-0 flex justify-between px-4 xl:-right-[3px] top-1/2">
           {currentIndexEvents < totalItemsEvents - itemsPerPageEvents && (
             <button
-              className="p-2 text-white bg-gray-800 rounded-full"
+              className="p-2 transition-all bg-white border-2 rounded-full shadow-lg xl:border-r-0 xl:rounded-r-none xl:px-4 xl:scale-125 border-darkBlue hover:bg-lightBlue hover:text-white xl:hover:px-6 xl:hover:mr-[2.5px] text-darkBlue hover:border-white"
               onClick={handleNextEvents}
             >
               <ChevronRight />

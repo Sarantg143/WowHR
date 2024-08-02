@@ -9,7 +9,7 @@ import LeaderShip from "./Components/LeaderShip";
 import OurService from "./Components/OurService";
 import LandingPage from "./Components/LandingPage";
 import Testimonials from "./Components/Testimonials";
-import LoadingPage from "./Components/LoadingPage";
+// import LoadingPage from "./Components/LoadingPage";
 
 function App() {
   return (
@@ -22,10 +22,10 @@ function App() {
       <OurService />
       <Partners />
       <LeaderShip />
-      <Knowledge />
       <Events />
+      <Knowledge />
       <Testimonials />
-      <div className="py-3 overflow-hidden bg-red-500 sm:py-10 ">
+      <div className="py-3 overflow-hidden sm:py-10 ">
         <Banner />
       </div>
       <Footer />

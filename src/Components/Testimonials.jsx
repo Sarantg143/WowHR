@@ -8,17 +8,17 @@ const Testimonials = () => {
   return (
     <section
       id="partners"
-      className="flex flex-col items-center justify-center h-full gap-10 px-5 py-5 my-0 overflow-hidden bg-green-600 xl:my-0 md:my-10 xl:py-0 xl:h-screen xl:gap-0 xl:justify-between"
+      className="flex flex-col items-center justify-center h-full gap-10 px-5 py-5 my-0 overflow-hidden bg-white cursor-default xl:my-0 md:my-10 xl:py-0 xl:h-screen xl:gap-0 xl:justify-between"
     >
       <div
-        className="max-w-2xl mb-0 bg-red-200 xl:mb-0 md:mb-5"
+        className="max-w-2xl mb-0 xl:mb-0 md:mb-5"
         data-aos="fade-right"
         data-aos-duration="500"
       >
-        <div className="mb-4 text-xl font-semibold text-center bg-green-300 md:text-3xl xl:mb-8 xl:text-3xl font-jost">
+        <div className="mb-4 text-xl font-semibold text-center md:text-3xl xl:mb-8 xl:text-3xl font-jost">
           TESTIMONIALS
         </div>
-        <div className="bg-green-400 text-xs md:text-xl xl:text-lg font-semibold text-center tracking-wider md:leading-[1.7] xl:leading-[1.5] mx-auto">
+        <div className=" text-xs md:text-xl xl:text-lg font-semibold text-center tracking-wider md:leading-[1.7] xl:leading-[1.5] mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </div>
@@ -52,15 +52,15 @@ const Testimonials = () => {
             </span>
           </div>
         </div>
-        <div className="bg-red-900 xl:w-[43%] text-white">
+        <div className=" xl:w-[43%] text-white">
           <Quote
-            className="w-6 h-6 mb-2 bg-red-100 xl:w-8 xl:h-8 xl:mb-4 fill-white stroke-none"
+            className="w-6 h-6 mb-2 xl:w-8 xl:h-8 xl:mb-4 fill-white stroke-none"
             data-aos="fade-left"
             data-aos-duration="250"
           />
 
           <div
-            className="flex gap-1 mb-3 bg-red-400"
+            className="flex gap-1 mb-3 "
             data-aos="fade-left"
             data-aos-duration="500"
           >
@@ -71,7 +71,7 @@ const Testimonials = () => {
             <Star className="w-4 xl:w-4 md:w-7 stroke-transparent fill-[#ff9c00]" />
           </div>
           <div
-            className="bg-orange-300 md:text-xl text-xs xl:text-lg font-semibold tracking-wide italic xl:w-[90%] leading-[1.5] mb-4 xl:mb-8"
+            className=" md:text-xl text-xs xl:text-lg font-semibold tracking-wide italic xl:w-[90%] leading-[1.5] mb-4 xl:mb-8"
             data-aos="fade-left"
             data-aos-duration="750"
           >
@@ -81,20 +81,20 @@ const Testimonials = () => {
             aliquip ex ea commodo consequat. Duis aute irure dolor.”
           </div>
           <div
-            className="flex gap-2 xl:gap-3 items-center bg-red-600 w-[60%] xl:w-[40%]"
+            className="flex gap-2 xl:gap-3 items-center  w-[60%] xl:w-[40%]"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
             <img
               src={linkedIn2}
               alt="linkedIn2"
-              className="w-12 h-12 rounded-lg xl:w-12 xl:h-12 md:h-16 md:w-16"
+              className="w-12 h-12 rounded-lg xl:w-14 xl:h-14 md:h-16 md:w-16"
             />
-            <div className="bg-red-300">
-              <div className="text-sm md:text-xl xl:text-base leading-[1.3] bg-red-800 font-jost">
+            <div className="">
+              <div className="text-sm md:text-xl xl:text-base leading-[1.3] font-jost">
                 N.KARTHIKEYAN
               </div>
-              <div className="text-[.6rem] md:text-lg xl:text-[.65rem] bg-red-300 leading-[1] xl:leading-[1] md:leading-[1]">
+              <div className="text-[.6rem] md:text-lg xl:text-[.65rem] leading-[1] xl:leading-[1.1] md:leading-[1]">
                 Deputy Director- <br></br>Career Development Centre KSR
                 Educational Institutions
               </div>

@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from "react";
 import pic1 from "../assets/Images/pic1.jpg";
 import pic2 from "../assets/Images/pic2.jpg";
 import pic3 from "../assets/Images/pic3.jpg";
+import { useState, useEffect, useRef } from "react";
 import roundStar from "../assets/SVG/roundStar.svg";
 import {
   Facebook,
@@ -15,8 +15,8 @@ import useScreenSize from "./useScreenSize";
 
 const LeaderShip = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedCity, setSelectedCity] = useState("All");
   const [selectedType, setSelectedType] = useState("mentor");
+  const [selectedCity, setSelectedCity] = useState("SELECT CITY");
 
   const cities = ["Chennai", "Coimbatore"];
 
@@ -394,8 +394,8 @@ const LeaderShip = () => {
 
   const filteredMembers = teamMembers.filter((member) => {
     return (
-      (selectedCity === "All" || member.city === selectedCity) &&
-      (selectedType === "All" || member.type === selectedType)
+      (selectedCity === "SELECT CITY" || member.city === selectedCity) &&
+      (selectedType === "SELECT CITY" || member.type === selectedType)
     );
   });
 
@@ -439,7 +439,13 @@ const LeaderShip = () => {
     }
 
     return () => clearInterval(intervalRefEvents.current);
-  }, [isHoveredEvents, totalItemsEvents, itemsPerPageEvents]);
+  }, [
+    isHoveredEvents,
+    totalItemsEvents,
+    itemsPerPageEvents,
+    selectedCity,
+    selectedType,
+  ]);
 
   // SLIDeeer
 
@@ -455,23 +461,19 @@ const LeaderShip = () => {
   return (
     <section
       id="leadership"
-      className="flex flex-col items-end justify-between h-full overflow-hidden text-white bg-blue-600 xl:h-screen"
+      className="flex flex-col items-end justify-between h-full overflow-hidden text-white cursor-default bg-defaultBlue xl:h-screen"
     >
-      <div
-        className="relative w-full mb-24 xl:mb-0 h-14 xl:h-24"
-        data-aos="zoom-in"
-        data-aos-duration="500"
-      >
+      <div className="relative w-full mb-24 bg-white xl:mb-0 h-14 xl:h-24">
         <img
           src={roundStar}
           alt="roundStar"
           className="absolute scale-90 -translate-x-1/2 left-1/2 top-5 xl:top-16 xl:scale-125"
         />
       </div>
-      <div className="flex flex-col w-full px-5 mx-auto mb-16 bg-green-400 xl:flex-row">
-        <div className="bg-red-300 xl:w-[37%] xl:px-32 xl:pr-28 flex flex-col my-auto">
+      <div className="flex flex-col w-full px-5 mx-auto mb-16 xl:flex-row">
+        <div className="xl:w-[37%] xl:px-32 xl:pr-28 flex flex-col my-auto">
           <div
-            className="relative inline-block mb-4 text-xl font-semibold bg-blue-500 xl:text-3xl md:text-4xl xl:mb-7 font-jost"
+            className="relative inline-block mb-4 text-xl font-semibold xl:text-3xl md:text-4xl xl:mb-7 font-jost"
             data-aos="fade-right"
             data-aos-duration="500"
           >
@@ -479,7 +481,7 @@ const LeaderShip = () => {
             <span className="custom-border"></span>
           </div>
           <div
-            className=" text-sm xl:text-lg md:text-2xl font-semibold xl:font-normal tracking-wider md:leading-[1.7] xl:leading-[1.6] mb-4  xl:mb-7  bg-red-500"
+            className=" text-sm xl:text-lg md:text-2xl font-semibold xl:font-normal tracking-wider md:leading-[1.7] xl:leading-[1.6] mb-4  xl:mb-7"
             data-aos="fade-right"
             data-aos-duration="500"
           >
@@ -493,21 +495,21 @@ const LeaderShip = () => {
             data-aos-duration="500"
           >
             <div
-              className={`px-5 xl:px-10 xl:py-3 py-2 md:text-xl text-sm xl:text-base font-semibold text-white bg-red-600 outline-none cursor-pointer
+              className={`px-5 xl:px-10 xl:py-3 py-2 md:text-xl text-sm xl:text-base font-semibold text-black bg-white outline-none cursor-pointer
     select-selected ${isOpen ? "select-arrow-active" : ""}`}
               onClick={() => setIsOpen(!isOpen)}
             >
               {selectedCity}
             </div>
             <div
-              className={`select-items z-20 absolute left-0 right-0 bg-red-600 ${
+              className={`select-items z-20 absolute left-0 right-0  ${
                 isOpen ? "select-show" : "select-hide"
               }`}
             >
               {cities.map((city) => (
                 <div
                   key={city}
-                  className="px-5 py-1 text-sm font-semibold text-white bg-red-100 cursor-pointer md:text-xl xl:py-2 xl:text-base xl:px-10 hover:bg-red-700"
+                  className="px-5 py-1 text-sm font-semibold bg-gray-200 text-black cursor-pointer md:text-xl xl:py-2 xl:text-base xl:px-10 hover:bg-[#089adec1] hover:text-white transition-all duration-300"
                   onClick={() => handleOptionClick(city)}
                 >
                   {city}
@@ -516,23 +518,28 @@ const LeaderShip = () => {
             </div>
           </div>
         </div>
-        <div className="bg-blue-100 xl:mt-0 mt-6 xl:w-[63%] ">
+        <div className="xl:mt-0 mt-6 xl:w-[63%] ">
           <div
-            className="flex mb-4 xl:mb-3 mx-[.40rem] bg-green-700 gap-7"
+            className="flex mb-4 xl:mb-3 mx-[.40rem]  gap-7"
             data-aos="fade-up"
             data-aos-duration="500"
           >
             <button
-              className={`py-1 px-2 md:text-xl text-sm min-w-36 xl:text-xl font-medium text-left  border-b-2 border-red-900 md:min-w-52 xl:min-w-72 font-jost ${
-                selectedType === "mentor" ? "bg-green-200" : "bg-red-300"
-              } `}
+              className={`hover:text-white transition-all duration-300 hover:border-white py-1 md:text-xl text-sm 
+                min-w-36 xl:text-xl font-medium text-left border-b-2  md:min-w-52 xl:min-w-72 font-jost ${
+                  selectedType === "mentor"
+                    ? "text-white border-white"
+                    : "text-gray-500 border-gray-500 "
+                } `}
               onClick={() => handleTypeClick("mentor")}
             >
               MENTOR
             </button>
             <button
-              className={`py-1 px-2 md:min-w-52 text-sm min-w-36 md:text-xl xl:text-xl font-medium text-left  border-b-2 border-red-900 xl:min-w-72 font-jost ${
-                selectedType === "core team" ? "bg-green-200" : "bg-red-300"
+              className={`py-1 md:min-w-52 text-sm min-w-36 md:text-xl hover:text-white transition-all duration-300 hover:border-white  xl:text-xl font-medium text-left  border-b-2 border-gray-400 xl:min-w-72 font-jost ${
+                selectedType === "core team"
+                  ? "text-white border-white"
+                  : "text-gray-500 border-gray-500 "
               } `}
               onClick={() => handleTypeClick("core team")}
             >
@@ -540,27 +547,17 @@ const LeaderShip = () => {
             </button>
           </div>
           <div
-            className="relative items-center justify-center overflow-hidden bg-blue-300 "
+            className="relative items-center justify-center overflow-hidden "
             onMouseEnter={() => setIsHoveredEvents(true)}
             onMouseLeave={() => setIsHoveredEvents(false)}
             data-aos="fade-left"
             data-aos-duration="500"
           >
             <div
-              className="flex gap-0 transition-transform duration-300 ease-in-out bg-red-900 xl:gap-5 "
+              className="flex gap-0 transition-transform duration-300 ease-in-out xl:gap-5 "
               style={{
                 transform: `translateX(-${translateXValue}%)`,
               }}
-              // style={{
-              //   transform: `translateX(-${
-              //     currentIndexEvents * (152 / itemsPerPageEvents)
-              //   }%)`,
-              // }}
-              // style={{
-              //   transform: `translateX(-${
-              //     currentIndexEvents * (102.2 / itemsPerPageEvents)
-              //   }%)`,
-              // }}
             >
               {filteredMembers.map((member, index) => (
                 <div
@@ -636,10 +633,10 @@ const LeaderShip = () => {
                 </div>
               ))}
             </div>
-            <div className="absolute left-0 flex justify-between px-4 top-1/2">
+            <div className="absolute left-0 flex justify-between px-4 top-[40%]">
               {currentIndexEvents > 0 && (
                 <button
-                  className="p-2 text-white bg-gray-800 rounded-full"
+                  className="p-2 bg-white rounded-full shadow-lg hover:bg-lightBlue hover:text-white hover:scale-[1.15] transition-all text-defaultBlue"
                   onClick={handlePrevEvents}
                 >
                   <ChevronLeft />
@@ -647,10 +644,10 @@ const LeaderShip = () => {
               )}
             </div>
 
-            <div className="absolute right-0 flex justify-between px-4 top-1/2">
+            <div className="absolute right-0 flex justify-between px-4 top-[40%]">
               {currentIndexEvents < totalItemsEvents - itemsPerPageEvents && (
                 <button
-                  className="p-2 text-white bg-gray-800 rounded-full"
+                  className="p-2 bg-white rounded-full shadow-lg hover:bg-lightBlue hover:text-white hover:scale-[1.15] transition-all text-defaultBlue"
                   onClick={handleNextEvents}
                 >
                   <ChevronRight />

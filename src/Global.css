@@ -24,7 +24,6 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  /* background-color: rgb(164, 163, 163); */
   background-color: #089ede;
   border: 3px solid transparent;
   border-radius: 12px;
@@ -36,7 +35,6 @@ a {
   background-color: rgb(255, 255, 255);
 }
 
-/* leadership */
 .custom-border {
   position: absolute;
   bottom: -7px;
@@ -62,12 +60,12 @@ a {
   width: 0;
   height: 0;
   border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+  border-color: #089ede transparent transparent transparent;
   transition: all 0.3s ease;
 }
 
 .select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
+  border-color: transparent transparent #089ede transparent;
   transform: translateY(-50%);
 }
 
@@ -84,35 +82,7 @@ a {
   max-height: 100px;
   transition: all 0.3s ease;
 }
-/* leadership */
-/* Prevent scrolling on the background content */
+
 .no-scroll {
   overflow: hidden;
 }
-
-/* 
-.antic-regular {
-  font-family: "Antic", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.jost-<uniquifier> {
-  font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-  // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 300 to 700
-
-.comfortaa-<uniquifier> {
-  font-family: "Comfortaa", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-*/

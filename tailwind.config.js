@@ -7,6 +7,7 @@ export default {
         defaultBlue: "#1850a8",
         darkBlue: "#011329",
         lightBlue: "#089ede",
+        lightestBlue: "#f0f6ff",
       },
       fontFamily: {
         comfortaa: ["Comfortaa", "sans-serif"],
@@ -16,7 +17,6 @@ export default {
       screens: {
         xs: "320px",
       },
-     
     },
   },
   plugins: [],

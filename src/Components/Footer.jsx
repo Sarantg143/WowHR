@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <section
       id="footer"
-      className="h-full my-auto overflow-hidden text-white xl:h-screen "
+      className="h-full my-auto overflow-hidden text-white cursor-default xl:h-screen "
     >
       <div className="flex w-full h-[10rem] xl:h-[19.5rem] ">
         <img src={f1} alt="f1" className="object-cover w-1/4 xl:w-full " />
@@ -25,12 +25,14 @@ const Footer = () => {
           backgroundSize: "contain",
           backgroundPosition: "top",
         }}
+        id="footerAnchor"
       >
-        <div className="mx-auto bg-red-300 xl:max-w-7xl">
+        <div className="mx-auto xl:max-w-7xl">
           <div className="flex flex-col items-center justify-between px-3 mb-7 xl:flex-row xl:px-10 xl:mb-16 xl:gap-10 ">
             <div
               className="w-[20rem] xl:w-[20rem] md:w-[35rem] "
               data-aos="fade-right"
+              data-aos-anchor="#footerAnchor"
               data-aos-duration="500"
             >
               <img
@@ -49,15 +51,16 @@ const Footer = () => {
                   className="w-full p-1 xl:p-2 text-[.65rem] xl:text-sm md:text-sm text-white bg-transparent"
                   placeholder="Your E-Mail"
                 />
-                <button className="px-2 xl:px-4 py-1 mb-1 text-[.65rem] xl:text-xs font-bold tracking-wide bg-white rounded-full text-defaultBlue">
+                <button className="px-2 xl:px-4 py-1 mb-1 text-[.65rem] xl:text-xs font-bold tracking-wide bg-white rounded-full transition-all duration-300 hover:text-white hover:bg-[#089adec1] text-defaultBlue">
                   SUBSCRIBE
                 </button>
               </div>
             </div>
-            <div className="flex gap-2 mb-auto bg-red-700 xl:gap-0 mt-7 xl:mt-2 xl:px-16 ">
+            <div className="flex gap-2 mb-auto xl:gap-0 mt-7 xl:mt-2 xl:px-16 ">
               <div
-                className="w-24 space-y-1 bg-red-100 md:w-44 xl:space-y-2 xl:w-48 xl:max-w-56"
+                className="w-24 space-y-1 md:w-44 xl:space-y-2 xl:w-48 xl:max-w-56"
                 data-aos="fade-left"
+                data-aos-anchor="#footerAnchor"
                 data-aos-duration="500"
               >
                 <div className="mb-5 text-sm font-semibold xl:text-xl md:text-xl font-jost">
@@ -95,8 +98,9 @@ const Footer = () => {
                 </a>
               </div>
               <div
-                className="w-24 space-y-1 bg-red-300 md:w-44 xl:space-y-2 xl:w-48 xl:max-w-56"
+                className="w-24 space-y-1 md:w-44 xl:space-y-2 xl:w-48 xl:max-w-56"
                 data-aos="fade-left"
+                data-aos-anchor="#footerAnchor"
                 data-aos-duration="750"
               >
                 <div className="mb-5 text-sm font-semibold xl:text-xl md:text-xl font-jost">
@@ -118,12 +122,18 @@ const Footer = () => {
               <div
                 className="space-y-1 xl:space-y-2 w-36 xl:w-56 xl:max-w-56"
                 data-aos="fade-left"
+                data-aos-anchor="#footerAnchor"
                 data-aos-duration="1000"
               >
                 <div className="mb-5 text-sm font-semibold xl:text-xl md:text-xl font-jost">
                   CONTACT
                 </div>
-                <div className="flex items-center text-[.65rem] xl:text-xs ">
+                <a
+                  href="https://maps.app.goo.gl/HzWV3bTdR6d19GTGA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-[.65rem] xl:text-xs "
+                >
                   <MapPin className="w-8 h-8 p-2 mb-auto text-gray-300 xl:w-10 xl:h-10" />
                   <div className="text-gray-400">
                     <div className="">Our Address:</div>
@@ -131,15 +141,21 @@ const Footer = () => {
                       Old Westbury 256, New York 11201, United States
                     </div>
                   </div>
-                </div>
-                <div className="flex items-center text-[.65rem] xl:text-xs text-gray-400">
+                </a>
+                <a
+                  href="tel:+8801234567890"
+                  className="flex items-center text-[.65rem] xl:text-xs text-gray-400"
+                >
                   <PhoneCall className="w-6 h-6 p-2 text-gray-300 xl:w-8 xl:h-8 " />
                   +880 123 (4567) 890
-                </div>
-                <div className="flex items-center text-[.65rem] xl:text-xs text-gray-400">
+                </a>
+                <a
+                  href="mailto:example@gmail.com"
+                  className="flex items-center text-[.65rem] xl:text-xs text-gray-400"
+                >
                   <AtSign className="w-6 h-6 p-2 text-gray-300 xl:w-8 xl:h-8" />
                   example@gmail.com
-                </div>
+                </a>
               </div>
             </div>
           </div>
