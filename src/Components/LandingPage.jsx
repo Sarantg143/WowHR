@@ -54,9 +54,10 @@ const LandingPage = () => {
               data-aos="fade-up"
               data-aos-duration="250"
               data-aos-anchor="#socialAnchor"
-              className="bg-white hover:shadow-xl cursor-pointer hover:scale-110 hover:translate-y-[-.25rem] hover:bg-lightBlue duration-200 hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs"
             >
-              <Facebook className="w-full h-auto" />
+              <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
+                <Facebook className="w-full h-auto" />
+              </div>
             </a>
             <a
               href="https://www.instagram.com"
@@ -65,10 +66,10 @@ const LandingPage = () => {
               data-aos="fade-up"
               data-aos-duration="500"
               data-aos-anchor="#socialAnchor"
-              className="bg-white cursor-pointer
-              hover:shadow-xl hover:scale-110 hover:translate-y-[-.25rem] hover:bg-lightBlue  duration-200 hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs"
             >
-              <Instagram className="w-full h-auto" />
+              <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
+                <Instagram className="w-full h-auto" />
+              </div>
             </a>
             <a
               href="https://www.github.com"
@@ -77,10 +78,10 @@ const LandingPage = () => {
               data-aos="fade-up"
               data-aos-duration="750"
               data-aos-anchor="#socialAnchor"
-              className="bg-white cursor-pointer
-              hover:shadow-xl hover:scale-110 hover:translate-y-[-.25rem] hover:bg-lightBlue  duration-200 hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs"
             >
-              <Github className="w-full h-auto" />
+              <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
+                <Github className="w-full h-auto" />
+              </div>
             </a>
             <a
               href="https://www.x.com"
@@ -89,10 +90,10 @@ const LandingPage = () => {
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-anchor="#socialAnchor"
-              className="bg-white cursor-pointer
-              hover:shadow-xl hover:scale-110 hover:translate-y-[-.25rem] hover:bg-lightBlue  duration-200 hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8  text-xs"
             >
-              <Twitter className="w-full h-auto" />
+              <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
+                <Twitter className="w-full h-auto" />
+              </div>
             </a>
           </div>
         </div>

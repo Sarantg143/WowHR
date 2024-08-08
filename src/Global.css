@@ -86,3 +86,27 @@ a {
 .no-scroll {
   overflow: hidden;
 }
+
+.afterPoint {
+  position: relative;
+}
+
+.afterPoint::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.afterPoint:hover::after {
+  width: 7px;
+  height: 7px;
+  bottom: -14px;
+  background-color: #089ede;
+}

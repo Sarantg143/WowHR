@@ -59,10 +59,10 @@ const AboutUs = () => {
           className=" xl:w-[45%] w-[70%] font-jost justify-between flex"
           data-aos="fade-up"
         >
-          <button className="bg-darkBlue text-white text-[.6rem] md:text-base xl:text-sm hover:shadow-lg px-2 md:px-8 xl:px-6 min-w-24 xl:min-w-36 py-2 xl:py-3 font-medium rounded-md hover:bg-[#089adec1] hover:text-white transition-all duration-200 hover:scale-[1.02] hover:translate-y-[-.1rem]">
+          <button className="bg-darkBlue text-white text-[.6rem] md:text-base xl:text-sm xl:hover:shadow-lg px-2 md:px-8 xl:px-6 min-w-24 xl:min-w-36 py-2 xl:py-3 font-medium rounded-md xl:hover:bg-[#089adec1] xl:hover:text-white transition-all duration-200 xl:hover:scale-[1.02] xl:hover:translate-y-[-.1rem]">
             OVERVIEW
           </button>
-          <button className="bg-white px-2 xl:px-6 min-w-24 xl:min-w-36 border-[1px] md:text-base hover:shadow-lg md:px-8 text-[.6rem] xl:text-sm border-darkBlue hover:bg-[#089adec1] hover:text-white py-2 xl:py-3 font-medium rounded-md transition-all duration-200 hover:scale-[1.02] hover:translate-y-[-.1rem]  hover:border-transparent">
+          <button className="bg-white px-2 xl:px-6 min-w-24 xl:min-w-36 border-[1px] md:text-base xl:hover:shadow-lg md:px-8 text-[.6rem] xl:text-sm border-darkBlue xl:hover:bg-[#089adec1] xl:hover:text-white py-2 xl:py-3 font-medium rounded-md transition-all duration-200 xl:hover:scale-[1.02] xl:hover:translate-y-[-.1rem]  xl:hover:border-transparent">
             KEY OBJECTIVE
           </button>
         </div>

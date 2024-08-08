@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <section
       id="footer"
-      className="h-full my-auto overflow-hidden text-white bg-black cursor-default xl:h-screen "
+      className="h-full my-auto overflow-hidden text-white bg-black cursor-default xl:min-h-screen "
     >
       <div className="flex w-full h-[10rem] xl:h-[19.5rem] ">
         <img src={f1} alt="f1" className="object-cover w-1/4 xl:w-full " />
@@ -45,7 +45,7 @@ const Footer = () => {
                   className="w-full p-1 xl:p-2 text-[.65rem] xl:text-sm md:text-sm text-white bg-transparent"
                   placeholder="Your E-Mail"
                 />
-                <button className="px-2 xl:px-4 py-1 mb-1 text-[.65rem] xl:text-xs font-bold tracking-wide bg-white rounded-full transition-all duration-300 hover:text-white hover:bg-[#089adec1] text-defaultBlue">
+                <button className="px-2 xl:px-4 py-1 mb-1 text-[.65rem] xl:text-xs font-bold tracking-wide bg-white rounded-full transition-all duration-300 xl:hover:text-white xl:hover:bg-[#089adec1] xl:hover:translate-y-[-.25rem]  text-defaultBlue">
                   SUBSCRIBE
                 </button>
               </div>
@@ -62,33 +62,33 @@ const Footer = () => {
                 </div>
                 <a
                   href="#about-us"
-                  className="text-[.65rem] xl:text-sm md:text-sm tracking-wider block text-gray-400 w-max"
+                  className="text-[.65rem] xl:text-sm md:text-sm transition-all duration-300 xl:hover:text-white xl:hover:-translate-y-[2px]  tracking-wider block text-gray-400 w-max translate-y-0"
                 >
                   About Us
                 </a>
                 <a
-                  href="#testimonials"
-                  className="text-[.65rem] xl:text-sm md:text-sm tracking-wider block text-gray-400 w-max"
+                  href="#leadership"
+                  className="text-[.65rem] xl:text-sm md:text-sm tracking-wider transition-all xl:hover:text-white duration-300 xl:hover:-translate-y-[2px]  block text-gray-400 w-max translate-y-0"
                 >
                   Meet the Team
                 </a>
                 <a
                   href="#events"
-                  className="text-[.65rem] xl:text-sm md:text-sm tracking-wider block text-gray-400 w-max"
+                  className="text-[.65rem] xl:text-sm md:text-sm tracking-wider block transition-all xl:hover:text-white duration-300 xl:hover:-translate-y-[2px]  text-gray-400 w-max translate-y-0"
                 >
-                  Integrations
+                  Events
+                </a>
+                <a
+                  href="#testimonials"
+                  className="text-[.65rem] xl:text-sm md:text-sm tracking-wider block transition-all xl:hover:text-white duration-300 xl:hover:-translate-y-[2px]  text-gray-400 w-max translate-y-0"
+                >
+                  Testimonial
                 </a>
                 <a
                   href="#footer"
-                  className="text-[.65rem] xl:text-sm md:text-sm tracking-wider block text-gray-400 w-max"
+                  className="text-[.65rem] xl:text-sm md:text-sm tracking-wider block transition-all xl:hover:text-white duration-300 xl:hover:-translate-y-[2px]  text-gray-400 w-max translate-y-0"
                 >
                   Contact Us
-                </a>
-                <a
-                  href="#our-services"
-                  className="text-[.65rem] xl:text-sm md:text-sm tracking-wider block text-gray-400 w-max"
-                >
-                  Blog
                 </a>
               </div>
               <div
@@ -100,16 +100,16 @@ const Footer = () => {
                 <div className="mb-5 text-sm font-semibold xl:text-xl md:text-xl font-jost">
                   SERVICE
                 </div>
-                <div className=" text-[.65rem] xl:text-sm md:text-sm tracking-wider text-gray-400 w-max">
+                <div className=" text-[.65rem] xl:text-sm md:text-sm tracking-wider transition-all xl:hover:text-white duration-300 xl:hover:-translate-y-[2px]  text-gray-400 w-max translate-y-0 cursor-pointer">
                   Network
                 </div>
-                <div className=" text-[.65rem] xl:text-sm md:text-sm tracking-wider text-gray-400 w-max">
+                <div className=" text-[.65rem] xl:text-sm md:text-sm tracking-wider transition-all xl:hover:text-white duration-300 xl:hover:-translate-y-[2px]  text-gray-400 w-max translate-y-0 cursor-pointer">
                   Chapters
                 </div>
-                <div className=" text-[.65rem] xl:text-sm md:text-sm tracking-wider text-gray-400 w-max">
+                <div className=" text-[.65rem] xl:text-sm md:text-sm tracking-wider transition-all xl:hover:text-white duration-300 xl:hover:-translate-y-[2px]  text-gray-400 w-max translate-y-0 cursor-pointer">
                   Certification
                 </div>
-                <div className=" text-[.65rem] xl:text-sm md:text-sm tracking-wider text-gray-400 w-max">
+                <div className=" text-[.65rem] xl:text-sm md:text-sm tracking-wider transition-all xl:hover:text-white duration-300 xl:hover:-translate-y-[2px]  text-gray-400 w-max translate-y-0 cursor-pointer">
                   Jobs
                 </div>
               </div>
@@ -126,10 +126,10 @@ const Footer = () => {
                   href="https://maps.app.goo.gl/HzWV3bTdR6d19GTGA"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center text-[.65rem] xl:text-xs "
+                  className="flex items-center text-[.65rem] xl:text-xs transition-all  text-gray-400 translate-y-0 xl:hover:text-white duration-300  xl:hover:-translate-y-[2px]"
                 >
-                  <MapPin className="w-8 h-8 p-2 mb-auto text-gray-300 xl:w-10 xl:h-10" />
-                  <div className="text-gray-400">
+                  <MapPin className="w-8 h-8 p-2 mb-auto xl:w-10 xl:h-10" />
+                  <div className="">
                     <div className="">Our Address:</div>
                     <div className="">
                       Old Westbury 256, New York 11201, United States
@@ -138,16 +138,16 @@ const Footer = () => {
                 </a>
                 <a
                   href="tel:+8801234567890"
-                  className="flex items-center text-[.65rem] xl:text-xs text-gray-400"
+                  className="flex items-center w-max text-[.65rem] xl:text-xs transition-all  text-gray-400 translate-y-0 xl:hover:text-white duration-300  xl:hover:-translate-y-[2px]"
                 >
-                  <PhoneCall className="w-6 h-6 p-2 text-gray-300 xl:w-8 xl:h-8 " />
+                  <PhoneCall className="w-6 h-6 p-2 xl:w-8 xl:h-8 " />
                   +880 123 (4567) 890
                 </a>
                 <a
                   href="mailto:example@gmail.com"
-                  className="flex items-center text-[.65rem] xl:text-xs text-gray-400"
+                  className="flex items-center w-max text-[.65rem] xl:text-xs transition-all  text-gray-400 translate-y-0 xl:hover:text-white duration-300  xl:hover:-translate-y-[2px]"
                 >
-                  <AtSign className="w-6 h-6 p-2 text-gray-300 xl:w-8 xl:h-8" />
+                  <AtSign className="w-6 h-6 p-2 xl:w-8 xl:h-8" />
                   example@gmail.com
                 </a>
               </div>
@@ -162,6 +162,7 @@ const Footer = () => {
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="transition-all xl:hover:text-gray-400 duration-300 xl:hover:-translate-y-[2px] translate-y-0"
               >
                 FACEBOOK
               </a>
@@ -169,6 +170,7 @@ const Footer = () => {
                 href="https://www.twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="transition-all xl:hover:text-gray-400 duration-300 xl:hover:-translate-y-[2px] translate-y-0"
               >
                 TWITTER
               </a>
@@ -176,6 +178,7 @@ const Footer = () => {
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="transition-all xl:hover:text-gray-400 duration-300 xl:hover:-translate-y-[2px] translate-y-0"
               >
                 INSTAGRAM
               </a>
@@ -183,6 +186,7 @@ const Footer = () => {
                 href="https://www.github.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="transition-all xl:hover:text-gray-400 duration-300 xl:hover:-translate-y-[2px] translate-y-0"
               >
                 GITHUB
               </a>

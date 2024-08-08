@@ -164,7 +164,7 @@ const Events = () => {
         <div className="absolute left-0 flex justify-between px-4 xl:-left-[1px] top-1/2">
           {currentIndexEvents > 0 && (
             <button
-              className="p-2 transition-all bg-white border-2 rounded-full shadow-lg xl:border-l-0 xl:rounded-l-none xl:px-4 xl:scale-125 border-darkBlue hover:bg-lightBlue hover:text-white xl:hover:ml-[2.5px] xl:hover:px-6 text-darkBlue hover:border-white"
+              className="p-2 transition-all bg-white border-2 rounded-full shadow-lg xl:border-l-0 xl:rounded-l-none xl:px-4 xl:scale-125 border-darkBlue xl:hover:bg-lightBlue xl:hover:text-white xl:hover:ml-[2.5px] xl:hover:px-6 text-darkBlue xl:hover:border-white"
               onClick={handlePrevEvents}
             >
               <ChevronLeft />
@@ -175,7 +175,7 @@ const Events = () => {
         <div className="absolute right-0 flex justify-between px-4 xl:-right-[3px] top-1/2">
           {currentIndexEvents < totalItemsEvents - itemsPerPageEvents && (
             <button
-              className="p-2 transition-all bg-white border-2 rounded-full shadow-lg xl:border-r-0 xl:rounded-r-none xl:px-4 xl:scale-125 border-darkBlue hover:bg-lightBlue hover:text-white xl:hover:px-6 xl:hover:mr-[2.5px] text-darkBlue hover:border-white"
+              className="p-2 transition-all bg-white border-2 rounded-full shadow-lg xl:border-r-0 xl:rounded-r-none xl:px-4 xl:scale-125 border-darkBlue xl:hover:bg-lightBlue xl:hover:text-white xl:hover:px-6 xl:hover:mr-[2.5px] text-darkBlue xl:hover:border-white"
               onClick={handleNextEvents}
             >
               <ChevronRight />

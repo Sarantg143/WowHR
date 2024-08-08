@@ -431,7 +431,7 @@ const LeaderShip = () => {
             return 0;
           }
         });
-      }, 3000);
+      }, 4000);
     };
 
     if (!isHoveredEvents) {
@@ -446,6 +446,10 @@ const LeaderShip = () => {
     selectedCity,
     selectedType,
   ]);
+
+  useEffect(() => {
+    setCurrentIndexEvents(0);
+  }, [selectedType, selectedCity]);
 
   // SLIDeeer
 
@@ -509,7 +513,7 @@ const LeaderShip = () => {
               {cities.map((city) => (
                 <div
                   key={city}
-                  className="px-5 py-1 text-sm font-semibold bg-gray-200 text-black cursor-pointer md:text-xl xl:py-2 xl:text-base xl:px-10 hover:bg-[#089adec1] hover:text-white transition-all duration-300"
+                  className="px-5 py-1 text-sm font-semibold bg-gray-200 text-black cursor-pointer md:text-xl xl:py-2 xl:text-base xl:px-10 xl:hover:bg-[#089adec1] xl:hover:text-white transition-all duration-300"
                   onClick={() => handleOptionClick(city)}
                 >
                   {city}
@@ -525,7 +529,7 @@ const LeaderShip = () => {
             data-aos-duration="500"
           >
             <button
-              className={`hover:text-white transition-all duration-300 hover:border-white py-1 md:text-xl text-sm 
+              className={`hover:text-white transition-all duration-300 xl:hover:border-white py-1 md:text-xl text-sm 
                 min-w-36 xl:text-xl font-medium text-left border-b-2  md:min-w-52 xl:min-w-72 font-jost ${
                   selectedType === "mentor"
                     ? "text-white border-white"
@@ -536,7 +540,7 @@ const LeaderShip = () => {
               MENTOR
             </button>
             <button
-              className={`py-1 md:min-w-52 text-sm min-w-36 md:text-xl hover:text-white transition-all duration-300 hover:border-white  xl:text-xl font-medium text-left  border-b-2 border-gray-400 xl:min-w-72 font-jost ${
+              className={`py-1 md:min-w-52 text-sm min-w-36 md:text-xl xl:hover:text-white transition-all duration-300 xl:hover:border-white  xl:text-xl font-medium text-left  border-b-2 border-gray-400 xl:min-w-72 font-jost ${
                 selectedType === "core team"
                   ? "text-white border-white"
                   : "text-gray-500 border-gray-500 "
@@ -636,7 +640,7 @@ const LeaderShip = () => {
             <div className="absolute left-0 flex justify-between px-4 top-[40%]">
               {currentIndexEvents > 0 && (
                 <button
-                  className="p-2 bg-white rounded-full shadow-lg hover:bg-lightBlue hover:text-white hover:scale-[1.15] transition-all text-defaultBlue"
+                  className="p-2 bg-white rounded-full shadow-lg xl:hover:bg-lightBlue xl:hover:text-white xl:hover:scale-[1.15] transition-all text-defaultBlue"
                   onClick={handlePrevEvents}
                 >
                   <ChevronLeft />
@@ -647,7 +651,7 @@ const LeaderShip = () => {
             <div className="absolute right-0 flex justify-between px-4 top-[40%]">
               {currentIndexEvents < totalItemsEvents - itemsPerPageEvents && (
                 <button
-                  className="p-2 bg-white rounded-full shadow-lg hover:bg-lightBlue hover:text-white hover:scale-[1.15] transition-all text-defaultBlue"
+                  className="p-2 bg-white rounded-full shadow-lg xl:hover:bg-lightBlue xl:hover:text-white xl:hover:scale-[1.15] transition-all text-defaultBlue"
                   onClick={handleNextEvents}
                 >
                   <ChevronRight />

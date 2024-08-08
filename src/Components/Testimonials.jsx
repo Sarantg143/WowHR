@@ -7,7 +7,7 @@ import { Star, Quote } from "lucide-react";
 const Testimonials = () => {
   return (
     <section
-      id="partners"
+      id="testimonials"
       className="flex flex-col items-center justify-center h-full gap-10 px-5 py-5 my-0 overflow-hidden bg-white cursor-default xl:my-0 md:my-10 xl:py-0 xl:h-screen xl:gap-0 xl:justify-between"
     >
       <div

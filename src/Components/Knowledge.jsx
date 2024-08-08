@@ -225,6 +225,10 @@ const Knowledge = () => {
     return () => clearInterval(intervalRefHub.current);
   }, [isHoveredHub, totalItemsHub, itemsPerPageHub, selectedType]);
 
+  useEffect(() => {
+    setCurrentIndexHub(0);
+  }, [selectedType]);
+
   // Sliding
 
   return (
@@ -251,7 +255,7 @@ const Knowledge = () => {
         data-aos-duration="750"
       >
         <button
-          className={`pb-2 text-xs  pt-1 md:text-2xl xl:text-xl  font-medium text-left border-b-2 hover:text-gray-700 transition-all duration-300 hover:border-gray-700  min-w-20 xl:min-w-40 xl:w-72 md:w-72 font-jost ${
+          className={`pb-2 text-xs  pt-1 md:text-2xl xl:text-xl  font-medium text-left border-b-2 xl:hover:text-gray-700 transition-all duration-300 xl:hover:border-gray-700  min-w-20 xl:min-w-40 xl:w-72 md:w-72 font-jost ${
             selectedType === "pepTalks"
               ? "text-black border-black"
               : "text-gray-400 border-gray-400"
@@ -261,7 +265,7 @@ const Knowledge = () => {
           Pep Talks
         </button>
         <button
-          className={`pb-2 text-xs  pt-1 md:text-2xl xl:text-xl  font-medium text-left  border-b-2 hover:text-gray-700 transition-all duration-300 hover:border-gray-700  min-w-20 xl:min-w-40 xl:w-72 md:w-72 font-jost ${
+          className={`pb-2 text-xs  pt-1 md:text-2xl xl:text-xl  font-medium text-left  border-b-2 xl:hover:text-gray-700 transition-all duration-300 xl:hover:border-gray-700  min-w-20 xl:min-w-40 xl:w-72 md:w-72 font-jost ${
             selectedType === "podcast"
               ? "text-black border-black"
               : "text-gray-400 border-gray-400"
@@ -271,7 +275,7 @@ const Knowledge = () => {
           Podcast
         </button>
         <button
-          className={`pb-2 text-xs px-1 pt-1 md:text-2xl xl:text-xl  font-medium text-left  border-b-2 hover:text-gray-700 transition-all duration-300 hover:border-gray-700  min-w-20 xl:min-w-40 xl:w-72 md:w-72 font-jost ${
+          className={`pb-2 text-xs px-1 pt-1 md:text-2xl xl:text-xl  font-medium text-left  border-b-2 xl:hover:text-gray-700 transition-all duration-300 xl:hover:border-gray-700  min-w-20 xl:min-w-40 xl:w-72 md:w-72 font-jost ${
             selectedType === "LearningPrograms"
               ? "text-black border-black"
               : "text-gray-400 border-gray-400"
@@ -316,9 +320,12 @@ const Knowledge = () => {
                   ></iframe>
                 </div>
                 <div className="flex flex-col h-40 gap-2 p-2 pt-4 xl:p-3 xl:gap-3 xl:h-52">
-                  <div className="text-xs xl:text-xl md:text-lg font-jost leading-[1.1] xl:leading-[1.1] font-[500] text-defaultBlue line-clamp-3 uppercase">
+                  <a
+                    href={x.videoSrc}
+                    className="text-xs xl:hover:underline xl:text-xl md:text-lg font-jost leading-[1.1] cursor-pointer duration-300 xl:hover:-translate-y-1 transition-all xl:hover:text-darkBlue xl:leading-[1.1] font-[500] text-defaultBlue line-clamp-3 uppercase"
+                  >
                     {x.title}
-                  </div>
+                  </a>
                   <div className="text-[.65rem] xl:text-xs tracking-wide font-bold leading-[1.1] xl:leading-[1.1]  line-clamp-4">
                     {x.description}
                   </div>
@@ -359,7 +366,7 @@ const Knowledge = () => {
               >
                 <div className="p-2 w-72 h-28 xl:h-48 md:h-48">
                   <iframe
-                    src="https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og"
+                    src={x.spotifySrc}
                     width="100%"
                     height="100%"
                     frameBorder="0"
@@ -367,9 +374,12 @@ const Knowledge = () => {
                   ></iframe>
                 </div>
                 <div className="flex flex-col h-24 gap-2 p-2 xl:gap-3 xl:p-3 xl:h-32">
-                  <div className="text-sm xl:text-xl md:text-lg  font-jost leading-[1.1] xl:leading-[1.1] font-[500] text-defaultBlue line-clamp-2 uppercase">
+                  <a
+                    href={x.spotifySrc}
+                    className="text-sm xl:text-xl md:text-lg  font-jost leading-[1.1] duration-300 xl:hover:-translate-y-1 transition-all xl:hover:text-darkBlue  xl:leading-[1.1] cursor-pointer font-[500] text-defaultBlue line-clamp-2 uppercase xl:hover:underline"
+                  >
                     {x.title}
-                  </div>
+                  </a>
                   <div className="text-xs xl:text-sm leading-[1.4] font-bold line-clamp-3">
                     {x.description}
                   </div>
@@ -407,9 +417,12 @@ const Knowledge = () => {
                   ></iframe>
                 </div>
                 <div className="flex flex-col h-32 gap-3 p-3 ">
-                  <div className="text-sm xl:text-xl md:text-lg font-jost leading-[1.1] xl:leading-[1.1] font-[500] text-defaultBlue line-clamp-2 uppercase">
+                  <a
+                    href={x.videoSrc}
+                    className="text-sm xl:text-xl xl:hover:underline md:text-lg font-jost leading-[1.1] xl:leading-[1.1] duration-300 xl:hover:-translate-y-1 transition-all xl:hover:text-darkBlue font-[500] text-defaultBlue line-clamp-2 uppercase"
+                  >
                     {x.title}
-                  </div>
+                  </a>
                   <div className="text-xs xl:text-sm leading-[1.4] font-bold line-clamp-3">
                     {x.description}
                   </div>
@@ -421,7 +434,7 @@ const Knowledge = () => {
         <div className="absolute left-0 flex justify-between px-4 xl:-left-[7px] top-1/2">
           {currentIndexHub > 0 && (
             <button
-              className="p-2 transition-all bg-white border-2 rounded-full shadow-lg xl:border-l-0 xl:rounded-l-none xl:px-4 xl:scale-125 border-darkBlue hover:bg-lightBlue hover:text-white xl:hover:ml-[2.5px] xl:hover:px-6 text-darkBlue hover:border-white"
+              className="p-2 transition-all bg-white border-2 rounded-full shadow-lg xl:border-l-0 xl:rounded-l-none xl:px-4 xl:scale-125 border-darkBlue xl:hover:bg-lightBlue xl:hover:text-white xl:hover:ml-[2.5px] xl:hover:px-6 text-darkBlue xl:hover:border-white"
               onClick={handlePrevHub}
             >
               <ChevronLeft />
@@ -431,7 +444,7 @@ const Knowledge = () => {
         <div className="absolute right-0 flex justify-between px-4 xl:-right-[7px] top-1/2">
           {currentIndexHub < totalItemsHub - itemsPerPageHub && (
             <button
-              className="p-2 transition-all bg-white border-2 rounded-full shadow-lg xl:border-r-0 xl:rounded-r-none xl:px-4 xl:scale-125 border-darkBlue hover:bg-lightBlue hover:text-white xl:hover:px-6 xl:hover:mr-[2.5px] text-darkBlue hover:border-white"
+              className="p-2 transition-all bg-white border-2 rounded-full shadow-lg xl:border-r-0 xl:rounded-r-none xl:px-4 xl:scale-125 border-darkBlue xl:hover:bg-lightBlue xl:hover:text-white xl:hover:px-6 xl:hover:mr-[2.5px] text-darkBlue xl:hover:border-white"
               onClick={handleNextHub}
             >
               <ChevronRight />
