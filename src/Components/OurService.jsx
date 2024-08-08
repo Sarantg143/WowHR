@@ -105,11 +105,11 @@ const OurService = () => {
         >
           <div
             className={`transition-all duration-300 translate-y-0 cursor-pointer xl:hover:drop-shadow-xl xl:hover:translate-y-[-4px] 
-              xl:translate-x-0 translate-x-12 xl:translate-y-6
+              xl:translate-x-0 translate-x-12
               ${
                 isHoveredOther && !isHovered2
                   ? "xl:scale-90 xl:translate-y-0"
-                  : "xl:scale-100"
+                  : "xl:scale-100 xl:translate-y-6"
               }`}
             onMouseEnter={() => {
               setIsHovered2(true);
@@ -211,11 +211,11 @@ const OurService = () => {
         >
           <div
             className={`transition-all duration-300 translate-y-0 cursor-pointer xl:hover:drop-shadow-xl xl:hover:translate-y-[-4px] 
-              xl:translate-x-0 translate-x-12 xl:translate-y-6
+              xl:translate-x-0 translate-x-12 
               ${
                 isHoveredOther && !isHovered4
                   ? "xl:scale-90 xl:translate-y-0"
-                  : "xl:scale-100"
+                  : "xl:scale-100 xl:translate-y-6"
               }`}
             onMouseEnter={() => {
               setIsHovered4(true);
