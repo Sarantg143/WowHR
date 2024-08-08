@@ -108,7 +108,7 @@ const OurService = () => {
               xl:translate-x-0 translate-x-12 xl:translate-y-6
               ${
                 isHoveredOther && !isHovered2
-                  ? "xl:scale-90 xl:translate-y-0"
+                  ? "xl:scale-90 xl:-translate-y-0"
                   : "xl:scale-100"
               }`}
             onMouseEnter={() => {
@@ -214,7 +214,7 @@ const OurService = () => {
               xl:translate-x-0 translate-x-12 xl:translate-y-6
               ${
                 isHoveredOther && !isHovered4
-                  ? "xl:scale-90 xl:translate-y-0"
+                  ? "xl:scale-90 xl:-translate-y-0"
                   : "xl:scale-100"
               }`}
             onMouseEnter={() => {
