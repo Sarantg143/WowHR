@@ -104,11 +104,11 @@ const OurService = () => {
           data-aos-duration="750"
         >
           <div
-            className={`transition-all duration-300 translate-y-0 cursor-pointer xl:hover:drop-shadow-xl xl:hover:-translate-y-1 
+            className={`transition-all duration-300 translate-y-0 cursor-pointer xl:hover:drop-shadow-xl xl:hover:translate-y-[-4px] 
               xl:translate-x-0 translate-x-12 xl:translate-y-6
               ${
                 isHoveredOther && !isHovered2
-                  ? "xl:scale-90 xl:-translate-y-0"
+                  ? "xl:scale-90 xl:translate-y-0"
                   : "xl:scale-100"
               }`}
             onMouseEnter={() => {
@@ -147,7 +147,7 @@ const OurService = () => {
               <span className="md:text-5xl text-xl xl:text-4xl xl:mt-2 leading-[.5] ">
                 &#8594;
               </span>
-              <div className=" relative -top-1 md:top-8 text-xs xl:text-2xl md:left-[6rem] md:text-3xl font-bold xl:left-[5.5rem] left-[3.15rem] w-max text-black">
+              <div className=" relative -top-1 xl:top-3 md:top-8 text-xs xl:text-2xl md:left-[6rem] md:text-3xl font-bold xl:left-[5.5rem] left-[3.15rem] w-max text-black">
                 2
               </div>
             </div>
@@ -210,11 +210,11 @@ const OurService = () => {
           data-aos-duration="250"
         >
           <div
-            className={`transition-all duration-300 translate-y-0 cursor-pointer xl:hover:drop-shadow-xl xl:hover:-translate-y-1 
+            className={`transition-all duration-300 translate-y-0 cursor-pointer xl:hover:drop-shadow-xl xl:hover:translate-y-[-4px] 
               xl:translate-x-0 translate-x-12 xl:translate-y-6
               ${
                 isHoveredOther && !isHovered4
-                  ? "xl:scale-90 xl:-translate-y-0"
+                  ? "xl:scale-90 xl:translate-y-0"
                   : "xl:scale-100"
               }`}
             onMouseEnter={() => {
