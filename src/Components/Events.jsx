@@ -1,55 +1,10 @@
 import useScreenSize from "./useScreenSize";
-import event1 from "../assets/Images/events1.jpg";
-import event2 from "../assets/Images/events2.jpg";
-import event3 from "../assets/Images/events3.jpg";
 import { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, LoaderCircle } from "lucide-react";
+import useFetchEvents from "../Data/useFetchEvents.js";
 
 const Events = () => {
-  const eventData = [
-    {
-      image: event1,
-      heading: "WOW HR",
-      date: "29 NOV, 2023",
-      description:
-        "A well awaited Masterclass on hashtag#hraudit is on our way soon!",
-    },
-    {
-      image: event2,
-      heading: "WOW HR",
-      date: "24 FEB, 2024",
-      description:
-        "We had our first HR Learning Marathon in Hyderabad gathering HR professionals from diversified industrial segments.",
-    },
-    {
-      image: event3,
-      heading: "WOW HR",
-      date: "29 JUL, 2024",
-      description:
-        "Join us for an enlightening conversation at our upcoming HR Conclave: A Dialogue with Visually Impaired Talent.",
-    },
-    {
-      image: event1,
-      heading: "WOW HR",
-      date: "29 NOV, 2023",
-      description:
-        "A well awaited Masterclass on hashtag#hraudit is on our way soon!",
-    },
-    {
-      image: event2,
-      heading: "WOW HR",
-      date: "24 FEB, 2024",
-      description:
-        "We had our first HR Learning Marathon in Hyderabad gathering HR professionals from diversified industrial segments.",
-    },
-    {
-      image: event3,
-      heading: "WOW HR",
-      date: "29 JUL, 2024",
-      description:
-        "Join us for an enlightening conversation at our upcoming HR Conclave: A Dialogue with Visually Impaired Talent.",
-    },
-  ];
+  const { eventsData, loading } = useFetchEvents();
 
   // SLIDeeer
 
@@ -62,7 +17,7 @@ const Events = () => {
   const [isHoveredEvents, setIsHoveredEvents] = useState(false);
   const [currentIndexEvents, setCurrentIndexEvents] = useState(0);
 
-  const totalItemsEvents = eventData.length;
+  const totalItemsEvents = eventsData.length;
 
   const handleNextEvents = () => {
     if (currentIndexEvents < totalItemsEvents - itemsPerPageEvents) {
@@ -131,35 +86,43 @@ const Events = () => {
             }%)`,
           }}
         >
-          {eventData.map((event, index) => (
-            <div
-              key={index}
-              className=" w-[24rem] mx-[1.45rem] xl:mx-[.5rem] transition-transform duration-500 shadow-md transform"
-              style={{ transition: "transform 0.5s ease-in-out" }}
-            >
-              <img
-                src={event.image}
-                alt={`event${index + 1}`}
-                className="object-cover  xl:min-w-[24rem] xl:min-h-[24rem] max-w-[24rem] max-h-[24rem] w-[18rem] h-[18rem] xl:w-[24rem] xl:h-[24rem] "
-              />
-              <div className="bg-lightestBlue h-[9rem] p-2 xl:p-4 space-y-4">
-                <div className="flex items-center gap-2 xl:gap-4 text-[.6rem] xl:text-[.65rem] md:text-[.8rem]">
-                  <div className="p-1 px-2 font-bold text-white rounded-r-full bg-defaultBlue xl:px-4">
-                    {event.heading}
-                  </div>
-                  <div className="flex items-center gap-2 font-bold text-gray-500">
-                    <span className="relative text-base xl:text-xl md:text-lg font-bold tracking-tighter top-[2px] text-defaultBlue">
-                      &#8226;
-                    </span>{" "}
-                    {event.date}
-                  </div>
-                </div>
-                <div className="text-sm font-bold xl:tracking-wide xl:text-base md:text-xl line-clamp-3">
-                  {event.description}
-                </div>
-              </div>
+          {loading ? (
+            <div className="flex items-center justify-center w-full h-full bg-defaultBlue">
+              <LoaderCircle className="w-12 h-12 text-white animate-spin" />
             </div>
-          ))}
+          ) : (
+            <>
+              {eventsData.map((event, index) => (
+                <div
+                  key={index}
+                  className=" w-[24rem] mx-[1.45rem] xl:mx-[.5rem] transition-transform duration-500 shadow-md transform"
+                  style={{ transition: "transform 0.5s ease-in-out" }}
+                >
+                  <img
+                    src={event.image}
+                    alt={`event${index + 1}`}
+                    className="object-cover  xl:min-w-[24rem] xl:min-h-[24rem] max-w-[24rem] max-h-[24rem] w-[18rem] h-[18rem] xl:w-[24rem] xl:h-[24rem] "
+                  />
+                  <div className="bg-lightestBlue h-[9rem] p-2 xl:p-4 space-y-4">
+                    <div className="flex items-center gap-2 xl:gap-4 text-[.6rem] xl:text-[.65rem] md:text-[.8rem]">
+                      <div className="p-1 px-2 font-bold text-white rounded-r-full bg-defaultBlue xl:px-4">
+                        {event.type}
+                      </div>
+                      <div className="flex items-center gap-2 font-bold text-gray-500">
+                        <span className="relative text-base xl:text-xl md:text-lg font-bold tracking-tighter top-[2px] text-defaultBlue">
+                          &#8226;
+                        </span>{" "}
+                        {event.date}
+                      </div>
+                    </div>
+                    <div className="text-sm font-bold xl:tracking-wide xl:text-base md:text-xl line-clamp-3">
+                      {event.description}
+                    </div>
+                  </div>
+                </div>
+              ))}{" "}
+            </>
+          )}
         </div>
         <div className="absolute left-0 flex justify-between px-4 xl:-left-[1px] top-1/2">
           {currentIndexEvents > 0 && (

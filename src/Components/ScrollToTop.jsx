@@ -29,7 +29,7 @@ const ScrollToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="p-2 text-white transition-all duration-300 border-2 border-transparent rounded-full shadow-lg xl:hover:border-lightBlue xl:hover:shadow-2xl bg-lightBlue bouncy xl:hover:-translate-y-2 xl:hover:bg-white xl:hover:text-lightBlue"
+          className="p-2 text-white transition-all duration-300 border-2 border-transparent rounded-full shadow-lg xl:hover:border-lightBlue xl:hover:shadow-2xl bg-lightBlue xl:hover:-translate-y-2 xl:hover:bg-white xl:hover:text-lightBlue"
         >
           <ChevronUp className="w-5 h-5 md:w-7 md:h-7 text-inherit" />
         </button>
